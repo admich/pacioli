@@ -1,0 +1,42 @@
+* Introduction
+
+~pacioli~ is an [[https://en.wikipedia.org/wiki/Accounting_software][accounting program]], written in common lisp using the
+[[https://common-lisp.net/project/mcclim/][CLIM]] GUI library.
+
+The name ~pacioli~ is a tribute to [[https://en.wikipedia.org/wiki/Luca_Pacioli][Luca Pacioli]].
+
+~pacioli~ started as viewer for [[https://www.ledger-cli.org/][ledger-cli]] file but now you can also
+use it to add and edit your transactions.
+
+~pacioli~ doesn't know all ledger-cli syntax but is able to load
+simple file and of course is able to load the file written by itself.
+
+* Installation & startup
+
+All the dependencies of ~pacioli~ can be loaded from [[https://www.quicklisp.org/beta/][quicklisp]] except
+[[https://github.com/admich/scigraph-evo][~scigraph-evo~]], [[https://github.com/admich/adm-clim-lib][~adm-clim-lib~]] and
+[[https://github.com/admich/mcclim-completion-patch][~mcclim-completion-patch~]]. Therefore it is necessary to clone
+~pacioli~, ~scigraph-evo~, ~adm-clim-lib~ and
+~mcclim-completion-patch~ in a directory where =asdf= can find them
+(e.g. =~/common-lisp= or =~/quicklisp/local-project=)
+
+#+BEGIN_SRC bash
+  $ cd ~/common-lisp
+  $ git clone https://github.com/admich/scigrap-evo.git
+  $ git clone https://github.com/admich/adm-clim-lib.git
+  $ git clone https://github.com/admich/mcclim-completion-patch.git
+  $ git clone https://github.com/admich/pacioli.git
+#+END_SRC
+
+Then load ~pacioli~ system with =quickload= and start the application:
+#+BEGIN_SRC lisp
+(ql:quickload :pacioli)
+(pacioli:pacioli :new-process t)
+#+END_SRC
+
+From the interactor import your ledger file with command =Import
+Ledger= or import the demo file with command =Demo=. Explore
+yourself. There is no auto-save so you need to save your work with
+command =Export As Ledger=.
+
+* Screenshot

@@ -1,0 +1,2081 @@
+2016/01/01 Opening Balances
+    * Assets:Bank   5000.0 EUR
+    * Assets:Cash   300.0 EUR
+    Equity:Opening Balances   -5300.0 EUR
+
+2016/01/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2016/01/23 Electricity
+    Expenses:Electricity   129.0 EUR
+    * Assets:Bank   -129.0 EUR
+
+2016/01/23 Gas
+    Expenses:Gas   280.0 EUR
+    * Assets:Bank   -280.0 EUR
+
+2016/01/23 Food
+    Expenses:Food   171.0 EUR
+    * Assets:Cash   -171.0 EUR
+
+2016/01/26 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2016/01/28 Food
+    Expenses:Food   183.0 EUR
+    * Assets:Cash   -183.0 EUR
+
+2016/02/09 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2016/02/11 Food
+    Expenses:Food   40.0 EUR
+    * Assets:Cash   -40.0 EUR
+
+2016/02/13 Food
+    Expenses:Food   198.0 EUR
+    * Assets:Cash   -198.0 EUR
+
+2016/02/16 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2016/02/18 Food
+    Expenses:Food   81.0 EUR
+    * Assets:Cash   -81.0 EUR
+
+2016/02/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2016/02/26 Food
+    Expenses:Food   162.0 EUR
+    * Assets:Cash   -162.0 EUR
+
+2016/03/05 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2016/03/07 Food
+    Expenses:Food   137.0 EUR
+    * Assets:Cash   -137.0 EUR
+
+2016/03/15 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2016/03/17 Food
+    Expenses:Food   196.0 EUR
+    * Assets:Cash   -196.0 EUR
+
+2016/03/19 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2016/03/21 Food
+    Expenses:Food   125.0 EUR
+    * Assets:Cash   -125.0 EUR
+
+2016/03/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2016/03/23 Electricity
+    Expenses:Electricity   57.0 EUR
+    * Assets:Bank   -57.0 EUR
+
+2016/04/06 Food
+    Expenses:Food   100.0 EUR
+    * Assets:Cash   -100.0 EUR
+
+2016/04/11 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2016/04/13 Food
+    Expenses:Food   36.0 EUR
+    * Assets:Cash   -36.0 EUR
+
+2016/04/18 Food
+    Expenses:Food   10.0 EUR
+    * Assets:Cash   -10.0 EUR
+
+2016/04/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2016/04/27 Food
+    Expenses:Food   66.0 EUR
+    * Assets:Cash   -66.0 EUR
+
+2016/05/03 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2016/05/05 Food
+    Expenses:Food   144.0 EUR
+    * Assets:Cash   -144.0 EUR
+
+2016/05/08 Food
+    Expenses:Food   171.0 EUR
+    * Assets:Cash   -171.0 EUR
+
+2016/05/12 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2016/05/14 Food
+    Expenses:Food   61.0 EUR
+    * Assets:Cash   -61.0 EUR
+
+2016/05/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2016/05/23 Electricity
+    Expenses:Electricity   95.0 EUR
+    * Assets:Bank   -95.0 EUR
+
+2016/05/23 Gas
+    Expenses:Gas   309.0 EUR
+    * Assets:Bank   -309.0 EUR
+
+2016/05/30 Food
+    Expenses:Food   28.0 EUR
+    * Assets:Cash   -28.0 EUR
+
+2016/06/09 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2016/06/11 Food
+    Expenses:Food   3.0 EUR
+    * Assets:Cash   -3.0 EUR
+
+2016/06/17 Food
+    Expenses:Food   110.0 EUR
+    * Assets:Cash   -110.0 EUR
+
+2016/06/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2016/06/25 Food
+    Expenses:Food   107.0 EUR
+    * Assets:Cash   -107.0 EUR
+
+2016/07/05 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2016/07/07 Food
+    Expenses:Food   165.0 EUR
+    * Assets:Cash   -165.0 EUR
+
+2016/07/19 Food
+    Expenses:Food   4.0 EUR
+    * Assets:Cash   -4.0 EUR
+
+2016/07/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2016/07/23 Electricity
+    Expenses:Electricity   122.0 EUR
+    * Assets:Bank   -122.0 EUR
+
+2016/07/31 Food
+    Expenses:Food   150.0 EUR
+    * Assets:Cash   -150.0 EUR
+
+2016/08/07 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2016/08/09 Food
+    Expenses:Food   58.0 EUR
+    * Assets:Cash   -58.0 EUR
+
+2016/08/21 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2016/08/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2016/08/23 Food
+    Expenses:Food   107.0 EUR
+    * Assets:Cash   -107.0 EUR
+
+2016/09/04 Food
+    Expenses:Food   30.0 EUR
+    * Assets:Cash   -30.0 EUR
+
+2016/09/11 Food
+    Expenses:Food   32.0 EUR
+    * Assets:Cash   -32.0 EUR
+
+2016/09/20 Food
+    Expenses:Food   116.0 EUR
+    * Assets:Cash   -116.0 EUR
+
+2016/09/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2016/09/23 Electricity
+    Expenses:Electricity   64.0 EUR
+    * Assets:Bank   -64.0 EUR
+
+2016/09/23 Gas
+    Expenses:Gas   221.0 EUR
+    * Assets:Bank   -221.0 EUR
+
+2016/09/27 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2016/09/29 Food
+    Expenses:Food   80.0 EUR
+    * Assets:Cash   -80.0 EUR
+
+2016/10/11 Food
+    Expenses:Food   23.0 EUR
+    * Assets:Cash   -23.0 EUR
+
+2016/10/21 Food
+    Expenses:Food   180.0 EUR
+    * Assets:Cash   -180.0 EUR
+
+2016/10/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2016/10/30 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2016/11/01 Food
+    Expenses:Food   67.0 EUR
+    * Assets:Cash   -67.0 EUR
+
+2016/11/02 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2016/11/04 Food
+    Expenses:Food   121.0 EUR
+    * Assets:Cash   -121.0 EUR
+
+2016/11/06 Food
+    Expenses:Food   65.0 EUR
+    * Assets:Cash   -65.0 EUR
+
+2016/11/10 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2016/11/12 Food
+    Expenses:Food   130.0 EUR
+    * Assets:Cash   -130.0 EUR
+
+2016/11/17 Food
+    Expenses:Food   189.0 EUR
+    * Assets:Cash   -189.0 EUR
+
+2016/11/20 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2016/11/22 Food
+    Expenses:Food   159.0 EUR
+    * Assets:Cash   -159.0 EUR
+
+2016/11/22 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2016/11/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2016/11/23 Electricity
+    Expenses:Electricity   129.0 EUR
+    * Assets:Bank   -129.0 EUR
+
+2016/11/24 Food
+    Expenses:Food   31.0 EUR
+    * Assets:Cash   -31.0 EUR
+
+2016/12/01 Food
+    Expenses:Food   67.0 EUR
+    * Assets:Cash   -67.0 EUR
+
+2016/12/01 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2016/12/03 Food
+    Expenses:Food   187.0 EUR
+    * Assets:Cash   -187.0 EUR
+
+2016/12/11 Food
+    Expenses:Food   66.0 EUR
+    * Assets:Cash   -66.0 EUR
+
+2016/12/22 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2016/12/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2016/12/24 Food
+    Expenses:Food   177.0 EUR
+    * Assets:Cash   -177.0 EUR
+
+2016/12/28 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2016/12/30 Food
+    Expenses:Food   90.0 EUR
+    * Assets:Cash   -90.0 EUR
+
+2017/01/03 Food
+    Expenses:Food   15.0 EUR
+    * Assets:Cash   -15.0 EUR
+
+2017/01/14 Food
+    Expenses:Food   100.0 EUR
+    * Assets:Cash   -100.0 EUR
+
+2017/01/19 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2017/01/21 Food
+    Expenses:Food   152.0 EUR
+    * Assets:Cash   -152.0 EUR
+
+2017/01/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2017/01/23 Electricity
+    Expenses:Electricity   132.0 EUR
+    * Assets:Bank   -132.0 EUR
+
+2017/01/23 Gas
+    Expenses:Gas   318.0 EUR
+    * Assets:Bank   -318.0 EUR
+
+2017/01/30 Food
+    Expenses:Food   191.0 EUR
+    * Assets:Cash   -191.0 EUR
+
+2017/02/12 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2017/02/14 Food
+    Expenses:Food   151.0 EUR
+    * Assets:Cash   -151.0 EUR
+
+2017/02/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2017/02/27 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2017/03/01 Food
+    Expenses:Food   73.0 EUR
+    * Assets:Cash   -73.0 EUR
+
+2017/03/06 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2017/03/08 Food
+    Expenses:Food   160.0 EUR
+    * Assets:Cash   -160.0 EUR
+
+2017/03/11 Food
+    Expenses:Food   9.0 EUR
+    * Assets:Cash   -9.0 EUR
+
+2017/03/17 Food
+    Expenses:Food   3.0 EUR
+    * Assets:Cash   -3.0 EUR
+
+2017/03/20 Food
+    Expenses:Food   69.0 EUR
+    * Assets:Cash   -69.0 EUR
+
+2017/03/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2017/03/23 Electricity
+    Expenses:Electricity   99.0 EUR
+    * Assets:Bank   -99.0 EUR
+
+2017/04/01 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2017/04/03 Food
+    Expenses:Food   131.0 EUR
+    * Assets:Cash   -131.0 EUR
+
+2017/04/13 Food
+    Expenses:Food   165.0 EUR
+    * Assets:Cash   -165.0 EUR
+
+2017/04/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2017/04/24 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2017/04/26 Food
+    Expenses:Food   110.0 EUR
+    * Assets:Cash   -110.0 EUR
+
+2017/05/09 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2017/05/11 Food
+    Expenses:Food   180.0 EUR
+    * Assets:Cash   -180.0 EUR
+
+2017/05/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2017/05/23 Electricity
+    Expenses:Electricity   181.0 EUR
+    * Assets:Bank   -181.0 EUR
+
+2017/05/23 Gas
+    Expenses:Gas   196.0 EUR
+    * Assets:Bank   -196.0 EUR
+
+2017/05/23 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2017/05/25 Food
+    Expenses:Food   51.0 EUR
+    * Assets:Cash   -51.0 EUR
+
+2017/05/29 Food
+    Expenses:Food   173.0 EUR
+    * Assets:Cash   -173.0 EUR
+
+2017/05/31 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2017/06/02 Food
+    Expenses:Food   168.0 EUR
+    * Assets:Cash   -168.0 EUR
+
+2017/06/08 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2017/06/10 Food
+    Expenses:Food   105.0 EUR
+    * Assets:Cash   -105.0 EUR
+
+2017/06/21 Food
+    Expenses:Food   49.0 EUR
+    * Assets:Cash   -49.0 EUR
+
+2017/06/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2017/07/04 Food
+    Expenses:Food   197.0 EUR
+    * Assets:Cash   -197.0 EUR
+
+2017/07/12 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2017/07/14 Food
+    Expenses:Food   33.0 EUR
+    * Assets:Cash   -33.0 EUR
+
+2017/07/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2017/07/23 Electricity
+    Expenses:Electricity   89.0 EUR
+    * Assets:Bank   -89.0 EUR
+
+2017/07/27 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2017/07/29 Food
+    Expenses:Food   129.0 EUR
+    * Assets:Cash   -129.0 EUR
+
+2017/08/02 Food
+    Expenses:Food   137.0 EUR
+    * Assets:Cash   -137.0 EUR
+
+2017/08/10 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2017/08/12 Food
+    Expenses:Food   64.0 EUR
+    * Assets:Cash   -64.0 EUR
+
+2017/08/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2017/08/24 Food
+    Expenses:Food   185.0 EUR
+    * Assets:Cash   -185.0 EUR
+
+2017/08/27 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2017/08/29 Food
+    Expenses:Food   190.0 EUR
+    * Assets:Cash   -190.0 EUR
+
+2017/09/11 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2017/09/13 Food
+    Expenses:Food   127.0 EUR
+    * Assets:Cash   -127.0 EUR
+
+2017/09/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2017/09/23 Electricity
+    Expenses:Electricity   162.0 EUR
+    * Assets:Bank   -162.0 EUR
+
+2017/09/23 Gas
+    Expenses:Gas   315.0 EUR
+    * Assets:Bank   -315.0 EUR
+
+2017/09/25 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2017/09/27 Food
+    Expenses:Food   9.0 EUR
+    * Assets:Cash   -9.0 EUR
+
+2017/09/30 Food
+    Expenses:Food   181.0 EUR
+    * Assets:Cash   -181.0 EUR
+
+2017/10/04 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2017/10/06 Food
+    Expenses:Food   88.0 EUR
+    * Assets:Cash   -88.0 EUR
+
+2017/10/08 Food
+    Expenses:Food   178.0 EUR
+    * Assets:Cash   -178.0 EUR
+
+2017/10/16 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2017/10/18 Food
+    Expenses:Food   37.0 EUR
+    * Assets:Cash   -37.0 EUR
+
+2017/10/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2017/10/31 Food
+    Expenses:Food   95.0 EUR
+    * Assets:Cash   -95.0 EUR
+
+2017/11/07 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2017/11/09 Food
+    Expenses:Food   92.0 EUR
+    * Assets:Cash   -92.0 EUR
+
+2017/11/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2017/11/23 Electricity
+    Expenses:Electricity   47.0 EUR
+    * Assets:Bank   -47.0 EUR
+
+2017/11/23 Food
+    Expenses:Food   130.0 EUR
+    * Assets:Cash   -130.0 EUR
+
+2017/11/23 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2017/11/25 Food
+    Expenses:Food   44.0 EUR
+    * Assets:Cash   -44.0 EUR
+
+2017/12/05 Food
+    Expenses:Food   30.0 EUR
+    * Assets:Cash   -30.0 EUR
+
+2017/12/20 Food
+    Expenses:Food   109.0 EUR
+    * Assets:Cash   -109.0 EUR
+
+2017/12/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2018/01/03 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2018/01/05 Food
+    Expenses:Food   73.0 EUR
+    * Assets:Cash   -73.0 EUR
+
+2018/01/11 Food
+    Expenses:Food   78.0 EUR
+    * Assets:Cash   -78.0 EUR
+
+2018/01/13 Food
+    Expenses:Food   116.0 EUR
+    * Assets:Cash   -116.0 EUR
+
+2018/01/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2018/01/23 Electricity
+    Expenses:Electricity   145.0 EUR
+    * Assets:Bank   -145.0 EUR
+
+2018/01/23 Gas
+    Expenses:Gas   192.0 EUR
+    * Assets:Bank   -192.0 EUR
+
+2018/01/27 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2018/01/29 Food
+    Expenses:Food   56.0 EUR
+    * Assets:Cash   -56.0 EUR
+
+2018/02/04 Food
+    Expenses:Food   145.0 EUR
+    * Assets:Cash   -145.0 EUR
+
+2018/02/08 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2018/02/10 Food
+    Expenses:Food   42.0 EUR
+    * Assets:Cash   -42.0 EUR
+
+2018/02/16 Food
+    Expenses:Food   101.0 EUR
+    * Assets:Cash   -101.0 EUR
+
+2018/02/20 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2018/02/22 Food
+    Expenses:Food   186.0 EUR
+    * Assets:Cash   -186.0 EUR
+
+2018/02/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2018/02/24 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2018/02/26 Food
+    Expenses:Food   86.0 EUR
+    * Assets:Cash   -86.0 EUR
+
+2018/03/05 Food
+    Expenses:Food   183.0 EUR
+    * Assets:Cash   -183.0 EUR
+
+2018/03/05 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2018/03/07 Food
+    Expenses:Food   4.0 EUR
+    * Assets:Cash   -4.0 EUR
+
+2018/03/20 Food
+    Expenses:Food   46.0 EUR
+    * Assets:Cash   -46.0 EUR
+
+2018/03/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2018/03/23 Electricity
+    Expenses:Electricity   176.0 EUR
+    * Assets:Bank   -176.0 EUR
+
+2018/03/23 Food
+    Expenses:Food   162.0 EUR
+    * Assets:Cash   -162.0 EUR
+
+2018/03/24 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2018/03/26 Food
+    Expenses:Food   196.0 EUR
+    * Assets:Cash   -196.0 EUR
+
+2018/03/26 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2018/03/28 Food
+    Expenses:Food   189.0 EUR
+    * Assets:Cash   -189.0 EUR
+
+2018/03/29 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2018/03/31 Food
+    Expenses:Food   21.0 EUR
+    * Assets:Cash   -21.0 EUR
+
+2018/04/07 Food
+    Expenses:Food   42.0 EUR
+    * Assets:Cash   -42.0 EUR
+
+2018/04/13 Food
+    Expenses:Food   161.0 EUR
+    * Assets:Cash   -161.0 EUR
+
+2018/04/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2018/04/25 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2018/04/27 Food
+    Expenses:Food   98.0 EUR
+    * Assets:Cash   -98.0 EUR
+
+2018/05/04 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2018/05/06 Food
+    Expenses:Food   186.0 EUR
+    * Assets:Cash   -186.0 EUR
+
+2018/05/07 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2018/05/09 Food
+    Expenses:Food   157.0 EUR
+    * Assets:Cash   -157.0 EUR
+
+2018/05/11 Food
+    Expenses:Food   157.0 EUR
+    * Assets:Cash   -157.0 EUR
+
+2018/05/13 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2018/05/15 Food
+    Expenses:Food   121.0 EUR
+    * Assets:Cash   -121.0 EUR
+
+2018/05/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2018/05/23 Electricity
+    Expenses:Electricity   116.0 EUR
+    * Assets:Bank   -116.0 EUR
+
+2018/05/23 Gas
+    Expenses:Gas   241.0 EUR
+    * Assets:Bank   -241.0 EUR
+
+2018/05/27 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2018/05/29 Food
+    Expenses:Food   34.0 EUR
+    * Assets:Cash   -34.0 EUR
+
+2018/06/01 Food
+    Expenses:Food   172.0 EUR
+    * Assets:Cash   -172.0 EUR
+
+2018/06/12 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2018/06/14 Food
+    Expenses:Food   32.0 EUR
+    * Assets:Cash   -32.0 EUR
+
+2018/06/20 Food
+    Expenses:Food   68.0 EUR
+    * Assets:Cash   -68.0 EUR
+
+2018/06/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2018/06/26 Food
+    Expenses:Food   187.0 EUR
+    * Assets:Cash   -187.0 EUR
+
+2018/07/03 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2018/07/05 Food
+    Expenses:Food   107.0 EUR
+    * Assets:Cash   -107.0 EUR
+
+2018/07/16 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2018/07/18 Food
+    Expenses:Food   39.0 EUR
+    * Assets:Cash   -39.0 EUR
+
+2018/07/20 Food
+    Expenses:Food   50.0 EUR
+    * Assets:Cash   -50.0 EUR
+
+2018/07/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2018/07/23 Electricity
+    Expenses:Electricity   183.0 EUR
+    * Assets:Bank   -183.0 EUR
+
+2018/08/04 Food
+    Expenses:Food   148.0 EUR
+    * Assets:Cash   -148.0 EUR
+
+2018/08/05 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2018/08/07 Food
+    Expenses:Food   146.0 EUR
+    * Assets:Cash   -146.0 EUR
+
+2018/08/09 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2018/08/11 Food
+    Expenses:Food   34.0 EUR
+    * Assets:Cash   -34.0 EUR
+
+2018/08/18 Food
+    Expenses:Food   116.0 EUR
+    * Assets:Cash   -116.0 EUR
+
+2018/08/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2018/09/02 Food
+    Expenses:Food   138.0 EUR
+    * Assets:Cash   -138.0 EUR
+
+2018/09/05 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2018/09/07 Food
+    Expenses:Food   100.0 EUR
+    * Assets:Cash   -100.0 EUR
+
+2018/09/19 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2018/09/21 Food
+    Expenses:Food   87.0 EUR
+    * Assets:Cash   -87.0 EUR
+
+2018/09/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2018/09/23 Electricity
+    Expenses:Electricity   168.0 EUR
+    * Assets:Bank   -168.0 EUR
+
+2018/09/23 Gas
+    Expenses:Gas   58.0 EUR
+    * Assets:Bank   -58.0 EUR
+
+2018/10/05 Food
+    Expenses:Food   37.0 EUR
+    * Assets:Cash   -37.0 EUR
+
+2018/10/18 Food
+    Expenses:Food   69.0 EUR
+    * Assets:Cash   -69.0 EUR
+
+2018/10/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2018/10/31 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2018/11/02 Food
+    Expenses:Food   166.0 EUR
+    * Assets:Cash   -166.0 EUR
+
+2018/11/15 Food
+    Expenses:Food   174.0 EUR
+    * Assets:Cash   -174.0 EUR
+
+2018/11/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2018/11/23 Electricity
+    Expenses:Electricity   116.0 EUR
+    * Assets:Bank   -116.0 EUR
+
+2018/11/28 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2018/11/30 Food
+    Expenses:Food   61.0 EUR
+    * Assets:Cash   -61.0 EUR
+
+2018/12/02 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2018/12/04 Food
+    Expenses:Food   200.0 EUR
+    * Assets:Cash   -200.0 EUR
+
+2018/12/12 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2018/12/14 Food
+    Expenses:Food   41.0 EUR
+    * Assets:Cash   -41.0 EUR
+
+2018/12/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2018/12/29 Food
+    Expenses:Food   78.0 EUR
+    * Assets:Cash   -78.0 EUR
+
+2019/01/04 Food
+    Expenses:Food   163.0 EUR
+    * Assets:Cash   -163.0 EUR
+
+2019/01/04 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2019/01/06 Food
+    Expenses:Food   121.0 EUR
+    * Assets:Cash   -121.0 EUR
+
+2019/01/13 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2019/01/15 Food
+    Expenses:Food   79.0 EUR
+    * Assets:Cash   -79.0 EUR
+
+2019/01/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2019/01/23 Electricity
+    Expenses:Electricity   149.0 EUR
+    * Assets:Bank   -149.0 EUR
+
+2019/01/23 Gas
+    Expenses:Gas   299.0 EUR
+    * Assets:Bank   -299.0 EUR
+
+2019/01/26 Food
+    Expenses:Food   155.0 EUR
+    * Assets:Cash   -155.0 EUR
+
+2019/02/01 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2019/02/03 Food
+    Expenses:Food   83.0 EUR
+    * Assets:Cash   -83.0 EUR
+
+2019/02/11 Food
+    Expenses:Food   35.0 EUR
+    * Assets:Cash   -35.0 EUR
+
+2019/02/20 Food
+    Expenses:Food   95.0 EUR
+    * Assets:Cash   -95.0 EUR
+
+2019/02/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2019/03/06 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2019/03/08 Food
+    Expenses:Food   100.0 EUR
+    * Assets:Cash   -100.0 EUR
+
+2019/03/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2019/03/23 Electricity
+    Expenses:Electricity   78.0 EUR
+    * Assets:Bank   -78.0 EUR
+
+2019/03/23 Food
+    Expenses:Food   113.0 EUR
+    * Assets:Cash   -113.0 EUR
+
+2019/03/29 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2019/03/31 Food
+    Expenses:Food   81.0 EUR
+    * Assets:Cash   -81.0 EUR
+
+2019/04/14 Food
+    Expenses:Food   38.0 EUR
+    * Assets:Cash   -38.0 EUR
+
+2019/04/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2019/04/23 Food
+    Expenses:Food   148.0 EUR
+    * Assets:Cash   -148.0 EUR
+
+2019/04/23 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2019/04/25 Food
+    Expenses:Food   196.0 EUR
+    * Assets:Cash   -196.0 EUR
+
+2019/05/04 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2019/05/06 Food
+    Expenses:Food   176.0 EUR
+    * Assets:Cash   -176.0 EUR
+
+2019/05/15 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2019/05/17 Food
+    Expenses:Food   195.0 EUR
+    * Assets:Cash   -195.0 EUR
+
+2019/05/18 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2019/05/20 Food
+    Expenses:Food   86.0 EUR
+    * Assets:Cash   -86.0 EUR
+
+2019/05/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2019/05/23 Electricity
+    Expenses:Electricity   131.0 EUR
+    * Assets:Bank   -131.0 EUR
+
+2019/05/23 Gas
+    Expenses:Gas   317.0 EUR
+    * Assets:Bank   -317.0 EUR
+
+2019/06/05 Food
+    Expenses:Food   161.0 EUR
+    * Assets:Cash   -161.0 EUR
+
+2019/06/10 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2019/06/12 Food
+    Expenses:Food   183.0 EUR
+    * Assets:Cash   -183.0 EUR
+
+2019/06/12 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2019/06/14 Food
+    Expenses:Food   153.0 EUR
+    * Assets:Cash   -153.0 EUR
+
+2019/06/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2019/06/27 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2019/06/29 Food
+    Expenses:Food   152.0 EUR
+    * Assets:Cash   -152.0 EUR
+
+2019/07/10 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2019/07/12 Food
+    Expenses:Food   145.0 EUR
+    * Assets:Cash   -145.0 EUR
+
+2019/07/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2019/07/23 Electricity
+    Expenses:Electricity   110.0 EUR
+    * Assets:Bank   -110.0 EUR
+
+2019/07/27 Food
+    Expenses:Food   12.0 EUR
+    * Assets:Cash   -12.0 EUR
+
+2019/08/07 Food
+    Expenses:Food   79.0 EUR
+    * Assets:Cash   -79.0 EUR
+
+2019/08/13 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2019/08/15 Food
+    Expenses:Food   69.0 EUR
+    * Assets:Cash   -69.0 EUR
+
+2019/08/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2019/08/26 Food
+    Expenses:Food   83.0 EUR
+    * Assets:Cash   -83.0 EUR
+
+2019/08/30 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2019/09/01 Food
+    Expenses:Food   117.0 EUR
+    * Assets:Cash   -117.0 EUR
+
+2019/09/05 Food
+    Expenses:Food   48.0 EUR
+    * Assets:Cash   -48.0 EUR
+
+2019/09/10 Food
+    Expenses:Food   63.0 EUR
+    * Assets:Cash   -63.0 EUR
+
+2019/09/18 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2019/09/20 Food
+    Expenses:Food   53.0 EUR
+    * Assets:Cash   -53.0 EUR
+
+2019/09/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2019/09/23 Electricity
+    Expenses:Electricity   150.0 EUR
+    * Assets:Bank   -150.0 EUR
+
+2019/09/23 Gas
+    Expenses:Gas   302.0 EUR
+    * Assets:Bank   -302.0 EUR
+
+2019/10/05 Food
+    Expenses:Food   44.0 EUR
+    * Assets:Cash   -44.0 EUR
+
+2019/10/13 Food
+    Expenses:Food   85.0 EUR
+    * Assets:Cash   -85.0 EUR
+
+2019/10/13 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2019/10/15 Food
+    Expenses:Food   38.0 EUR
+    * Assets:Cash   -38.0 EUR
+
+2019/10/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2019/10/26 Food
+    Expenses:Food   193.0 EUR
+    * Assets:Cash   -193.0 EUR
+
+2019/11/08 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2019/11/10 Food
+    Expenses:Food   195.0 EUR
+    * Assets:Cash   -195.0 EUR
+
+2019/11/14 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2019/11/16 Food
+    Expenses:Food   90.0 EUR
+    * Assets:Cash   -90.0 EUR
+
+2019/11/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2019/11/23 Electricity
+    Expenses:Electricity   90.0 EUR
+    * Assets:Bank   -90.0 EUR
+
+2019/12/02 Food
+    Expenses:Food   44.0 EUR
+    * Assets:Cash   -44.0 EUR
+
+2019/12/17 Food
+    Expenses:Food   99.0 EUR
+    * Assets:Cash   -99.0 EUR
+
+2019/12/21 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2019/12/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2019/12/23 Food
+    Expenses:Food   73.0 EUR
+    * Assets:Cash   -73.0 EUR
+
+2020/01/05 Food
+    Expenses:Food   37.0 EUR
+    * Assets:Cash   -37.0 EUR
+
+2020/01/05 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2020/01/07 Food
+    Expenses:Food   146.0 EUR
+    * Assets:Cash   -146.0 EUR
+
+2020/01/16 Food
+    Expenses:Food   78.0 EUR
+    * Assets:Cash   -78.0 EUR
+
+2020/01/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2020/01/23 Electricity
+    Expenses:Electricity   92.0 EUR
+    * Assets:Bank   -92.0 EUR
+
+2020/01/23 Gas
+    Expenses:Gas   357.0 EUR
+    * Assets:Bank   -357.0 EUR
+
+2020/01/28 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2020/01/30 Food
+    Expenses:Food   66.0 EUR
+    * Assets:Cash   -66.0 EUR
+
+2020/02/08 Food
+    Expenses:Food   101.0 EUR
+    * Assets:Cash   -101.0 EUR
+
+2020/02/20 Food
+    Expenses:Food   111.0 EUR
+    * Assets:Cash   -111.0 EUR
+
+2020/02/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2020/02/28 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2020/03/01 Food
+    Expenses:Food   188.0 EUR
+    * Assets:Cash   -188.0 EUR
+
+2020/03/02 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2020/03/04 Food
+    Expenses:Food   106.0 EUR
+    * Assets:Cash   -106.0 EUR
+
+2020/03/14 Food
+    Expenses:Food   118.0 EUR
+    * Assets:Cash   -118.0 EUR
+
+2020/03/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2020/03/23 Electricity
+    Expenses:Electricity   179.0 EUR
+    * Assets:Bank   -179.0 EUR
+
+2020/03/28 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2020/03/30 Food
+    Expenses:Food   110.0 EUR
+    * Assets:Cash   -110.0 EUR
+
+2020/04/04 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2020/04/06 Food
+    Expenses:Food   160.0 EUR
+    * Assets:Cash   -160.0 EUR
+
+2020/04/17 Food
+    Expenses:Food   111.0 EUR
+    * Assets:Cash   -111.0 EUR
+
+2020/04/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2020/04/25 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2020/04/27 Food
+    Expenses:Food   47.0 EUR
+    * Assets:Cash   -47.0 EUR
+
+2020/05/02 Food
+    Expenses:Food   137.0 EUR
+    * Assets:Cash   -137.0 EUR
+
+2020/05/09 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2020/05/11 Food
+    Expenses:Food   56.0 EUR
+    * Assets:Cash   -56.0 EUR
+
+2020/05/19 Food
+    Expenses:Food   28.0 EUR
+    * Assets:Cash   -28.0 EUR
+
+2020/05/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2020/05/23 Electricity
+    Expenses:Electricity   58.0 EUR
+    * Assets:Bank   -58.0 EUR
+
+2020/05/23 Gas
+    Expenses:Gas   305.0 EUR
+    * Assets:Bank   -305.0 EUR
+
+2020/05/26 Food
+    Expenses:Food   104.0 EUR
+    * Assets:Cash   -104.0 EUR
+
+2020/06/03 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2020/06/05 Food
+    Expenses:Food   16.0 EUR
+    * Assets:Cash   -16.0 EUR
+
+2020/06/14 Food
+    Expenses:Food   17.0 EUR
+    * Assets:Cash   -17.0 EUR
+
+2020/06/19 Food
+    Expenses:Food   184.0 EUR
+    * Assets:Cash   -184.0 EUR
+
+2020/06/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2020/07/01 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2020/07/03 Food
+    Expenses:Food   177.0 EUR
+    * Assets:Cash   -177.0 EUR
+
+2020/07/08 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2020/07/10 Food
+    Expenses:Food   163.0 EUR
+    * Assets:Cash   -163.0 EUR
+
+2020/07/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2020/07/23 Electricity
+    Expenses:Electricity   129.0 EUR
+    * Assets:Bank   -129.0 EUR
+
+2020/07/24 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2020/07/26 Food
+    Expenses:Food   57.0 EUR
+    * Assets:Cash   -57.0 EUR
+
+2020/08/07 Food
+    Expenses:Food   172.0 EUR
+    * Assets:Cash   -172.0 EUR
+
+2020/08/10 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2020/08/12 Food
+    Expenses:Food   108.0 EUR
+    * Assets:Cash   -108.0 EUR
+
+2020/08/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2020/08/28 Food
+    Expenses:Food   158.0 EUR
+    * Assets:Cash   -158.0 EUR
+
+2020/09/07 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2020/09/09 Food
+    Expenses:Food   178.0 EUR
+    * Assets:Cash   -178.0 EUR
+
+2020/09/16 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2020/09/18 Food
+    Expenses:Food   98.0 EUR
+    * Assets:Cash   -98.0 EUR
+
+2020/09/21 Food
+    Expenses:Food   55.0 EUR
+    * Assets:Cash   -55.0 EUR
+
+2020/09/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2020/09/23 Electricity
+    Expenses:Electricity   170.0 EUR
+    * Assets:Bank   -170.0 EUR
+
+2020/09/23 Gas
+    Expenses:Gas   296.0 EUR
+    * Assets:Bank   -296.0 EUR
+
+2020/10/05 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2020/10/07 Food
+    Expenses:Food   158.0 EUR
+    * Assets:Cash   -158.0 EUR
+
+2020/10/12 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2020/10/14 Food
+    Expenses:Food   23.0 EUR
+    * Assets:Cash   -23.0 EUR
+
+2020/10/22 Food
+    Expenses:Food   66.0 EUR
+    * Assets:Cash   -66.0 EUR
+
+2020/10/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2020/10/25 Food
+    Expenses:Food   167.0 EUR
+    * Assets:Cash   -167.0 EUR
+
+2020/11/01 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2020/11/03 Food
+    Expenses:Food   195.0 EUR
+    * Assets:Cash   -195.0 EUR
+
+2020/11/15 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2020/11/17 Food
+    Expenses:Food   62.0 EUR
+    * Assets:Cash   -62.0 EUR
+
+2020/11/19 Food
+    Expenses:Food   1.0 EUR
+    * Assets:Cash   -1.0 EUR
+
+2020/11/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2020/11/23 Electricity
+    Expenses:Electricity   88.0 EUR
+    * Assets:Bank   -88.0 EUR
+
+2020/11/24 Food
+    Expenses:Food   142.0 EUR
+    * Assets:Cash   -142.0 EUR
+
+2020/12/03 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2020/12/05 Food
+    Expenses:Food   107.0 EUR
+    * Assets:Cash   -107.0 EUR
+
+2020/12/15 Food
+    Expenses:Food   102.0 EUR
+    * Assets:Cash   -102.0 EUR
+
+2020/12/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2020/12/23 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2020/12/25 Food
+    Expenses:Food   60.0 EUR
+    * Assets:Cash   -60.0 EUR
+
+2021/01/04 Food
+    Expenses:Food   104.0 EUR
+    * Assets:Cash   -104.0 EUR
+
+2021/01/14 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2021/01/16 Food
+    Expenses:Food   46.0 EUR
+    * Assets:Cash   -46.0 EUR
+
+2021/01/21 Food
+    Expenses:Food   19.0 EUR
+    * Assets:Cash   -19.0 EUR
+
+2021/01/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2021/01/23 Electricity
+    Expenses:Electricity   140.0 EUR
+    * Assets:Bank   -140.0 EUR
+
+2021/01/23 Gas
+    Expenses:Gas   377.0 EUR
+    * Assets:Bank   -377.0 EUR
+
+2021/02/06 Food
+    Expenses:Food   122.0 EUR
+    * Assets:Cash   -122.0 EUR
+
+2021/02/15 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2021/02/17 Food
+    Expenses:Food   62.0 EUR
+    * Assets:Cash   -62.0 EUR
+
+2021/02/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2021/03/01 Food
+    Expenses:Food   50.0 EUR
+    * Assets:Cash   -50.0 EUR
+
+2021/03/11 Food
+    Expenses:Food   111.0 EUR
+    * Assets:Cash   -111.0 EUR
+
+2021/03/14 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2021/03/16 Food
+    Expenses:Food   114.0 EUR
+    * Assets:Cash   -114.0 EUR
+
+2021/03/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2021/03/23 Electricity
+    Expenses:Electricity   140.0 EUR
+    * Assets:Bank   -140.0 EUR
+
+2021/03/29 Food
+    Expenses:Food   108.0 EUR
+    * Assets:Cash   -108.0 EUR
+
+2021/04/01 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2021/04/03 Food
+    Expenses:Food   9.0 EUR
+    * Assets:Cash   -9.0 EUR
+
+2021/04/08 Food
+    Expenses:Food   153.0 EUR
+    * Assets:Cash   -153.0 EUR
+
+2021/04/22 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2021/04/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2021/04/24 Food
+    Expenses:Food   95.0 EUR
+    * Assets:Cash   -95.0 EUR
+
+2021/04/30 Food
+    Expenses:Food   13.0 EUR
+    * Assets:Cash   -13.0 EUR
+
+2021/05/02 Food
+    Expenses:Food   124.0 EUR
+    * Assets:Cash   -124.0 EUR
+
+2021/05/03 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2021/05/05 Food
+    Expenses:Food   92.0 EUR
+    * Assets:Cash   -92.0 EUR
+
+2021/05/15 Food
+    Expenses:Food   137.0 EUR
+    * Assets:Cash   -137.0 EUR
+
+2021/05/18 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2021/05/20 Food
+    Expenses:Food   18.0 EUR
+    * Assets:Cash   -18.0 EUR
+
+2021/05/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2021/05/23 Electricity
+    Expenses:Electricity   111.0 EUR
+    * Assets:Bank   -111.0 EUR
+
+2021/05/23 Gas
+    Expenses:Gas   410.0 EUR
+    * Assets:Bank   -410.0 EUR
+
+2021/05/27 Food
+    Expenses:Food   188.0 EUR
+    * Assets:Cash   -188.0 EUR
+
+2021/06/06 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2021/06/08 Food
+    Expenses:Food   12.0 EUR
+    * Assets:Cash   -12.0 EUR
+
+2021/06/16 Food
+    Expenses:Food   14.0 EUR
+    * Assets:Cash   -14.0 EUR
+
+2021/06/21 Food
+    Expenses:Food   4.0 EUR
+    * Assets:Cash   -4.0 EUR
+
+2021/06/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2021/07/06 Food
+    Expenses:Food   28.0 EUR
+    * Assets:Cash   -28.0 EUR
+
+2021/07/11 Food
+    Expenses:Food   89.0 EUR
+    * Assets:Cash   -89.0 EUR
+
+2021/07/12 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2021/07/14 Food
+    Expenses:Food   105.0 EUR
+    * Assets:Cash   -105.0 EUR
+
+2021/07/20 Food
+    Expenses:Food   55.0 EUR
+    * Assets:Cash   -55.0 EUR
+
+2021/07/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2021/07/23 Electricity
+    Expenses:Electricity   155.0 EUR
+    * Assets:Bank   -155.0 EUR
+
+2021/07/28 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2021/07/30 Food
+    Expenses:Food   183.0 EUR
+    * Assets:Cash   -183.0 EUR
+
+2021/08/01 Food
+    Expenses:Food   79.0 EUR
+    * Assets:Cash   -79.0 EUR
+
+2021/08/04 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2021/08/06 Food
+    Expenses:Food   198.0 EUR
+    * Assets:Cash   -198.0 EUR
+
+2021/08/06 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2021/08/08 Food
+    Expenses:Food   40.0 EUR
+    * Assets:Cash   -40.0 EUR
+
+2021/08/17 Food
+    Expenses:Food   53.0 EUR
+    * Assets:Cash   -53.0 EUR
+
+2021/08/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2021/08/24 Food
+    Expenses:Food   96.0 EUR
+    * Assets:Cash   -96.0 EUR
+
+2021/09/06 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2021/09/08 Food
+    Expenses:Food   131.0 EUR
+    * Assets:Cash   -131.0 EUR
+
+2021/09/12 Food
+    Expenses:Food   198.0 EUR
+    * Assets:Cash   -198.0 EUR
+
+2021/09/16 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2021/09/18 Food
+    Expenses:Food   142.0 EUR
+    * Assets:Cash   -142.0 EUR
+
+2021/09/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2021/09/23 Electricity
+    Expenses:Electricity   169.0 EUR
+    * Assets:Bank   -169.0 EUR
+
+2021/09/23 Gas
+    Expenses:Gas   162.0 EUR
+    * Assets:Bank   -162.0 EUR
+
+2021/10/02 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2021/10/04 Food
+    Expenses:Food   167.0 EUR
+    * Assets:Cash   -167.0 EUR
+
+2021/10/14 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2021/10/16 Food
+    Expenses:Food   73.0 EUR
+    * Assets:Cash   -73.0 EUR
+
+2021/10/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2021/11/01 Food
+    Expenses:Food   172.0 EUR
+    * Assets:Cash   -172.0 EUR
+
+2021/11/01 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2021/11/03 Food
+    Expenses:Food   67.0 EUR
+    * Assets:Cash   -67.0 EUR
+
+2021/11/10 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2021/11/12 Food
+    Expenses:Food   181.0 EUR
+    * Assets:Cash   -181.0 EUR
+
+2021/11/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2021/11/23 Electricity
+    Expenses:Electricity   112.0 EUR
+    * Assets:Bank   -112.0 EUR
+
+2021/11/28 Food
+    Expenses:Food   139.0 EUR
+    * Assets:Cash   -139.0 EUR
+
+2021/12/10 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2021/12/12 Food
+    Expenses:Food   178.0 EUR
+    * Assets:Cash   -178.0 EUR
+
+2021/12/16 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2021/12/18 Food
+    Expenses:Food   90.0 EUR
+    * Assets:Cash   -90.0 EUR
+
+2021/12/20 Food
+    Expenses:Food   43.0 EUR
+    * Assets:Cash   -43.0 EUR
+
+2021/12/23 Salary
+    * Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2022/01/02 ATM
+    * Assets:Bank   -200.0 EUR
+    * Assets:Cash   200.0 EUR
+
+2022/01/04 Food
+    Expenses:Food   92.0 EUR
+    * Assets:Cash   -92.0 EUR
+
+2022/01/15 Food
+    Expenses:Food   96.0 EUR
+    * Assets:Cash   -96.0 EUR
+
+2022/01/22 ATM
+    Assets:Bank   -200.0 EUR
+    Assets:Cash   200.0 EUR
+
+2022/01/23 Salary
+    Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2022/01/23 Electricity
+    Expenses:Electricity   124.0 EUR
+    Assets:Bank   -124.0 EUR
+
+2022/01/23 Gas
+    Expenses:Gas   139.0 EUR
+    Assets:Bank   -139.0 EUR
+
+2022/01/24 Food
+    Expenses:Food   200.0 EUR
+    Assets:Cash   -200.0 EUR
+
+2022/01/25 ATM
+    Assets:Bank   -200.0 EUR
+    Assets:Cash   200.0 EUR
+
+2022/01/27 Food
+    Expenses:Food   164.0 EUR
+    Assets:Cash   -164.0 EUR
+
+2022/02/12 Food
+    Expenses:Food   19.0 EUR
+    Assets:Cash   -19.0 EUR
+
+2022/02/21 ATM
+    Assets:Bank   -200.0 EUR
+    Assets:Cash   200.0 EUR
+
+2022/02/23 Salary
+    Assets:Bank   1200.0 EUR
+    Income:Salary   -1200.0 EUR
+
+2022/02/23 Food
+    Expenses:Food   171.0 EUR
+    Assets:Cash   -171.0 EUR
+
+2022/02/28 Food
+    Expenses:Food   102.0 EUR
+    Assets:Cash   -102.0 EUR
+
+2022/03/10 ATM
+    Assets:Bank   -200.0 EUR
+    Assets:Cash   200.0 EUR
+
+2022/03/12 Food
+    Expenses:Food   107.0 EUR
+    Assets:Cash   -107.0 EUR
+
