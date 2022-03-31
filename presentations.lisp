@@ -12,7 +12,7 @@
 
 ;;;; ACCOUNT
 
-(define-presentation-method present (object (type account) stream view &key)
+(define-presentation-method present (object (type general-account) stream view &key)
   (declare (ignore view))
   (format stream "~a" (long-name object)))
 

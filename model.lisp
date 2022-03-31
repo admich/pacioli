@@ -95,16 +95,20 @@
 (defclass name-mixin ()
   ((%name :initarg :name :accessor name)))
 
-(defclass account (name-mixin)
+(defclass general-account (name-mixin)
   ((%parent :initarg :parent :accessor parent :initform nil)
    (%children :initarg :children-accounts :accessor children :initform '())))
+
+(defclass account (general-account)
+  ())
 
 (defmethod print-object ((object account) stream)
   (print-unreadable-object (object stream :type t :identity t)
     (format stream "(~a)" (name object))))
 
 (defclass journal (account)
-  ((%transactions :initarg :transactions :accessor transactions :initform '())))
+  ((%transactions :initarg :transactions :accessor transactions :initform '())
+   (%virtual-accounts :initarg :virtual-accounts :accessor virtual-accounts :initform '())))
 
 (defmethod long-name ((account journal))
   (name account))
@@ -230,7 +234,7 @@
 
 
 ;;;; virtual accounts
-(defclass virtual-account (account)
+(defclass virtual-account (general-account)
   ((fn-transaction-p :initarg :fn-transaction-p
                      :accessor fn-transaction-p
                      :initform (lambda (transaction) nil)
