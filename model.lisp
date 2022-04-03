@@ -90,6 +90,12 @@
                            :value (* (value amount) factor)
                            :commodity *main-commodity*)))))
 
+(defmethod amount-zerop ((amount multi-commodity-amount))
+  (every #'amount-zerop (amount-amounts amount)))
+
+(defmethod amount-zerop ((amount single-commodity-amount))
+  (zerop (value amount)))
+
 
 ;;;; account
 (defclass name-mixin ()
@@ -107,13 +113,12 @@
     (format stream "(~a)" (name object))))
 
 (defclass journal (account)
-  ((%transactions :initarg :transactions :accessor transactions :initform '())
-   (%virtual-accounts :initarg :virtual-accounts :accessor virtual-accounts :initform '())))
+  ((%transactions :initarg :transactions :accessor transactions :initform '())))
 
 (defmethod long-name ((account journal))
   (name account))
 
-(defmethod long-name ((account account))
+(defmethod long-name ((account general-account))
   (if (typep (parent account) 'journal)
       (name account)
       (concatenate 'string (long-name (parent account)) ":" (name account))))
@@ -223,7 +228,7 @@
 
 (defgeneric balance (account &key time reconciled))
 
-(defmethod balance ((account account) &key time reconciled)
+(defmethod balance ((account  general-account) &key time reconciled)
   (declare (ignore time))
   (loop :with total = (make-instance 'multi-commodity-amount)
         :for x :in (transactions account) :do
@@ -244,11 +249,16 @@
                           :initform (lambda (transaction) (make-instance 'multi-commodity-amount))
                           :documentation "A function of one argument that return the amount for the account in the transaction in the argument")))
 
+(defmethod transactions-sink ((account virtual-account))
+  "Return the transactions from which select the transactions 
+of the account ACCOUNT"
+  (a:when-let ((parent (parent account)))
+    (transactions parent)))
+
 (defmethod transactions ((account virtual-account))
   "Return the transaction in which is involved the account ACCOUNT"
-  (let ((fn (fn-transaction-p account))
-        (transactions-sink (transactions (parent account))))
-    (sort (loop for x in transactions-sink
+  (let ((fn (fn-transaction-p account)))
+    (sort (loop for x in (transactions-sink account)
              when (funcall fn x)
              collect x)  #'local-time:timestamp< :key #'date)))
 
@@ -267,7 +277,20 @@
                                           (loop :with total = (make-instance 'multi-commodity-amount)
                                                 :for account :in accounts do
                                                   (setf total (add-amounts total (amount-for-account transaction account)))
-                                               finally (return total)))))
+                                                finally (return total)))))
+
+(defun transaction-broken-p (transaction)
+  (not (amount-zerop (total-amount transaction))))
+
+(defun total-amount (transaction)
+  (loop :with total = (make-instance 'multi-commodity-amount)
+        :for x :in (entries transaction) :do
+          (setf total
+                (add-amounts
+                 total
+                 (amount x)))
+        :finally (return total)))
+
 
 (defun save-journal (journal file)
   (cl-store:store journal file))

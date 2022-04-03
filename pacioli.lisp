@@ -42,13 +42,30 @@
         ("Go-Back" :command com-go-back-view :keystroke (#\B :control))
         ("Go-Forward" :command com-go-forward-view :keystroke (#\F :control)))))
 
+(defclass pacioli-frame-virtual-account (virtual-account)
+  ((%frame :initarg :frame :initform nil :accessor frame)))
+
+(defmethod transactions-sink ((account pacioli-frame-virtual-account))
+  (a:when-let ((parent (parent account)))
+    (transactions (current-journal (frame account)))))
+
+(defmethod parent :around ((account pacioli-frame-virtual-account))
+  (or (call-next-method) (current-journal (frame account))))
+
+(defun make-broken-transactions-vaccount (frame)
+  (make-instance 'pacioli-frame-virtual-account
+                 :frame frame
+                 :name "Broken transactions"
+                 :fn-transaction-p #'transaction-broken-p
+                 :fn-amount-for-account #'total-amount))
 ;;;; application definition
 (define-application-frame pacioli (store-history-application-mixin)
   ((%current-journal :initform (make-instance 'journal :name "andrea") :accessor current-journal)
    (%reconcile-account :initform nil :accessor reconcile-account)
    (%reconcile-target :initform 0 :accessor reconcile-target)
    (%reconcile-current-entry :initform nil :accessor reconcile-current-entry)
-   (%reconcile-current-entry-presentation :initform nil :accessor reconcile-current-entry-presentation))
+   (%reconcile-current-entry-presentation :initform nil :accessor reconcile-current-entry-presentation)
+   (%virtual-accounts :initform '() :accessor virtual-accounts))
   (:command-table (pacioli :inherit-from (cmd-file :treeview :zelig :graph)
                            :menu #.pacioli-menu))
   (:pointer-documentation t)
@@ -87,11 +104,34 @@
                #'(lambda (x) (loop for i in (pacioli-model::children x) collect i))
                :display-function 'display-pane
                :incremental-redisplay t
+               :default-view +tabular-view+))
+   (vaccounts-tree
+    (make-pane 'treeview-pane
+               :tree-roots #'(lambda (frame)
+                               (virtual-accounts frame))
+               :printer
+               #'(lambda (node s)
+                   (with-output-as-presentation (s node 'virtual-account)
+                     (format s "~a" (name node))))
+               :tabular-printers
+               (list
+                (list #'(lambda (node s) (format s "(~d)" (length (transactions node))))
+                           :align-x :right)
+                (list #'(lambda (node s) (present (balance node) 'amount :stream s))
+                           :align-x :right)
+                (list #'(lambda (node s) (present (balance node) '((amount) :value :market) :stream s))
+                           :align-x :right))
+               :inferior-producer
+               #'(lambda (x) (loop for i in (pacioli-model::children x) collect i))
+               :display-function 'display-pane
+               :incremental-redisplay t
                :default-view +tabular-view+)))
   (:layouts (default
              (horizontally (:height (graft-height (find-graft))
                             :width (graft-width (find-graft)))
-               (1/4 (scrolling (:scroll-bars t) accounts-tree))
+               (1/4 (vertically ()
+                      (2/3 (scrolling (:scroll-bars t) accounts-tree))
+                      (1/3 (scrolling (:scroll-bars t) vaccounts-tree))))
                (make-pane 'clim-extensions:box-adjuster-gadget)
                (3/4 (vertically ()
                       (1 secondary)
@@ -101,7 +141,9 @@
             (reconcile
                 (horizontally (:height (graft-height (find-graft))
                                :width (graft-width (find-graft)))
-                  (1/4 (scrolling (:scroll-bars t) accounts-tree))
+                  (1/4 (vertically ()
+                         (2/3 (scrolling (:scroll-bars t) accounts-tree))
+                         (1/3 (scrolling (:scroll-bars t) vaccounts-tree))))
                   (make-pane 'clim-extensions:box-adjuster-gadget)
                   (3/4 (vertically ()
                          reconcile-status
@@ -112,6 +154,9 @@
                          inter)))))
   (:reinitialize-frames t)
   (:default-initargs :history-file (merge-pathnames "history.store" *config-directory*)))
+
+(defmethod run-frame-top-level :before ((frame pacioli) &key)
+  (push (make-broken-transactions-vaccount frame) (virtual-accounts frame)))
 
 (defun pacioli (&key new-process (restore-history t))
   (if new-process
@@ -224,7 +269,7 @@
 (define-pacioli-command (com-refresh :name t) ()
   (redisplay-frame-panes *application-frame*))
 
-(define-pacioli-command (com-view-account :name t) ((account 'account :gesture :select))
+(define-pacioli-command (com-view-account :name t) ((account 'general-account :gesture :select))
   (set-main-view (make-instance 'view-account :account account)))
 
 (define-pacioli-command (com-view-commodities :name t) ()

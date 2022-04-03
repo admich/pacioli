@@ -49,7 +49,12 @@
    #:reconciled
    #:note
    #:tags
-   #:*possible-tags*)
+   #:*possible-tags*
+   #:general-account
+   #:make-broken-transactions-vaccount
+   #:transaction-broken-p
+   #:total-amount
+   #:virtual-account)
   (:local-nicknames (#:a #:alexandria) (#:lt #:local-time)))
 
 (defpackage #:pacioli
