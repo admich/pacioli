@@ -18,12 +18,22 @@
   (declare (ignore view))
   (format stream "~a" (long-name object)))
 
+(define-presentation-method accept ((type general-account) stream view &key)
+  (declare (ignore view))
+  (let ((obj (completing-from-suggestions (stream :partial-completers '(#\:))
+               (dolist (acc (subaccounts (current-journal *application-frame*)))
+                 (suggest (long-name acc) acc))
+               (dolist (acc (virtual-accounts *application-frame*))
+                 (suggest (long-name acc) acc)))))
+    obj))
+
 (define-presentation-method accept ((type account) stream view &key)
   (declare (ignore view))
   (let ((obj (completing-from-suggestions (stream :partial-completers '(#\:))
                (dolist (acc (subaccounts (current-journal *application-frame*)))
                  (suggest (long-name acc) acc)))))
     obj))
+
 ;;;; TRANSACTION
 
 (define-presentation-method present (object (type transaction) stream view &key)
