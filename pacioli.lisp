@@ -59,25 +59,25 @@
                  :fn-transaction-p #'transaction-broken-p
                  :fn-amount-for-account #'total-amount))
 ;;;; application definition
-(define-application-frame pacioli (store-history-application-mixin)
+(define-application-frame pacioli (acl:store-history-application-mixin)
   ((%current-journal :initform (make-instance 'journal :name "andrea") :accessor current-journal)
    (%reconcile-account :initform nil :accessor reconcile-account)
    (%reconcile-target :initform 0 :accessor reconcile-target)
    (%reconcile-current-entry :initform nil :accessor reconcile-current-entry)
    (%reconcile-current-entry-presentation :initform nil :accessor reconcile-current-entry-presentation)
    (%virtual-accounts :initform '() :accessor virtual-accounts))
-  (:command-table (pacioli :inherit-from (cmd-file :treeview :zelig :graph)
+  (:command-table (pacioli :inherit-from (cmd-file acl:treeview acl:zelig :graph)
                            :menu #.pacioli-menu))
   (:pointer-documentation t)
   (:panes
    (inter :interactor
           :height 100)
-   (main (make-pane 'application-with-display-history-pane
-                    :display-function 'display-pane
+   (main (make-pane 'acl:application-with-display-history-pane
+                    :display-function 'acl:display-pane
                     :incremental-redisplay nil
                     :display-time :command-loop))
    (secondary :application
-              :display-function 'display-pane
+              :display-function 'acl:display-pane
               :incremental-redisplay nil
               :display-time :command-loop
               :scroll-bars :both)
@@ -89,7 +89,7 @@
               :display-time :command-loop
               :scroll-bars nil)
    (accounts-tree
-    (make-pane 'treeview-pane
+    (make-pane 'acl:treeview-pane
                :tree-roots #'(lambda (frame) (list (current-journal frame)))
                :printer
                #'(lambda (node s)
@@ -102,11 +102,11 @@
                            :align-x :right))
                :inferior-producer
                #'(lambda (x) (loop for i in (pacioli-model::children x) collect i))
-               :display-function 'display-pane
+               :display-function 'acl:display-pane
                :incremental-redisplay t
-               :default-view +tabular-view+))
+               :default-view acl:+tabular-view+))
    (vaccounts-tree
-    (make-pane 'treeview-pane
+    (make-pane 'acl:treeview-pane
                :tree-roots #'(lambda (frame)
                                (virtual-accounts frame))
                :printer
@@ -123,9 +123,9 @@
                            :align-x :right))
                :inferior-producer
                #'(lambda (x) (loop for i in (pacioli-model::children x) collect i))
-               :display-function 'display-pane
+               :display-function 'acl:display-pane
                :incremental-redisplay t
-               :default-view +tabular-view+)))
+               :default-view acl:+tabular-view+)))
   (:layouts (default
              (horizontally (:height (graft-height (find-graft))
                             :width (graft-width (find-graft)))
@@ -163,10 +163,10 @@
       (clim-sys:make-process (lambda () (run-frame-top-level (make-application-frame 'pacioli :restore-history-p restore-history))) :name "pacioli")
       (run-frame-top-level (make-application-frame 'pacioli))))
 
-(defmethod display-pane-with-view (frame pane view)
+(defmethod acl:display-pane-with-view (frame pane view)
   (format pane "Pacioli"))
 
-(defmethod display-pane-with-view ((frame pacioli) pane (view view-account))
+(defmethod acl:display-pane-with-view ((frame pacioli) pane (view view-account))
   (let ((account (view-account view)))
     (format pane "~a~%" (long-name account))
     (present (balance account) '((amount) :value :all) :stream pane)
@@ -176,10 +176,10 @@
          for background = t then (not background) do
            (if background
                (surrounding-output-with-border (pane :background +lightgrey+ :line-thickness 0 :ink +transparent-ink+)
-                 (present i 'transaction :view +tabular-view+))
-               (present i 'transaction :view +tabular-view+))))))
+                 (present i 'transaction :view acl:+tabular-view+))
+               (present i 'transaction :view acl:+tabular-view+))))))
 
-(defmethod display-pane-with-view ((frame pacioli) pane (view view-commodities))
+(defmethod acl:display-pane-with-view ((frame pacioli) pane (view view-commodities))
   (formatting-table (pane)
     (formatting-row (pane)
       (formatting-cell (pane)
@@ -199,10 +199,10 @@
 
 
 (define-pacioli-command (com-go-back-view :name t) ()
-  (undo-display-history (find-pane-named *application-frame* 'main)))
+  (acl:undo-display-history (find-pane-named *application-frame* 'main)))
 
 (define-pacioli-command (com-go-forward-view :name t) ()
-  (redo-display-history (find-pane-named *application-frame* 'main)))
+  (acl:redo-display-history (find-pane-named *application-frame* 'main)))
 
 (define-gesture-name :scroll-down :keyboard (#\v :control) :unique t)
 (define-gesture-name :scroll-up :keyboard (#\v :meta) :unique t)
@@ -277,7 +277,7 @@
 
 
 ;;;; Plot commands
-(defmethod display-pane-with-view ((frame pacioli) pane (view view-plot))
+(defmethod acl:display-pane-with-view ((frame pacioli) pane (view view-plot))
   (let ((graph (view-plot-graph view)))
     ;; when use refresh instead of display-graph?
     (gr:display-graph graph :stream pane :width 800 :height 600)))
@@ -407,7 +407,7 @@
 (defclass edit-transaction-view (textual-view)
   ((%transaction :initarg :transaction :reader view-transaction)))
 
-(defmethod display-pane-with-view ((frame pacioli) pane (view edit-transaction-view))
+(defmethod acl:display-pane-with-view ((frame pacioli) pane (view edit-transaction-view))
   (let* ((*standard-output* pane)
          (transaction (view-transaction view))
          (entries (entries transaction)))
@@ -695,7 +695,7 @@
     (redisplay-frame-pane *application-frame* window)
     (scroll-extent window x y)))
 
-(defmethod display-pane-with-view (frame pane (view reconcile-view))
+(defmethod acl:display-pane-with-view (frame pane (view reconcile-view))
   (let ((*standard-output* pane)
         (account (reconcile-account frame)))
     (labels ((present-entry (entry)

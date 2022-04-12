@@ -58,9 +58,9 @@
   (:local-nicknames (#:a #:alexandria) (#:lt #:local-time)))
 
 (defpackage #:pacioli
-  (:use #:clim-lisp #:clim #:pacioli-model #:adm-clim-lib)
+  (:use #:clim-lisp #:clim #:pacioli-model)
   (:export
    #:pacioli)
   (:nicknames #:clim-ledger)
-  (:local-nicknames (#:a #:alexandria) (#:lt #:local-time)))
+  (:local-nicknames (#:a #:alexandria) (#:lt #:local-time) (#:acl #:adm-clim-lib)))
 

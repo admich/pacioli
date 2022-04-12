@@ -1,5 +1,7 @@
 (in-package :pacioli)
-
+;;;; timestamp
+(define-presentation-type-abbreviation timestamp ()
+  '((adm-clim-lib:timestamp) :format (:year "-" (:month 2) "-" (:day 2))))
 ;;;; VIEWS
 
 (defclass view-commodities (view) ())
@@ -28,7 +30,7 @@
   (declare (ignore view))
   (format stream "~a" object))
 
-(define-presentation-method present (object (type transaction) stream (view tabular-view) &key)
+(define-presentation-method present (object (type transaction) stream (view acl:tabular-view) &key)
   (formatting-row (stream)
     (formatting-cell (stream)
       (present (date object) 'timestamp :stream stream))
@@ -39,7 +41,7 @@
     (formatting-cell (stream :align-x :right)
       (format stream "~@[[note]~]" (note object))))
   (dolist (entry (entries object))
-    (present entry 'entry :stream stream :view +tabular-view+)))
+    (present entry 'entry :stream stream :view acl:+tabular-view+)))
 
 (define-presentation-method accept ((type transaction) stream view &key)
   (declare (ignore view))
@@ -53,7 +55,7 @@
   (declare (ignore view))
   (format stream "~a" object))
 
-(define-presentation-method present (object (type entry) stream (view tabular-view) &key)
+(define-presentation-method present (object (type entry) stream (view acl:tabular-view) &key)
   (formatting-row (stream)
     (formatting-cell (stream :align-x :right)
       (present (reconciled object) 'reconcile-status :stream stream))
