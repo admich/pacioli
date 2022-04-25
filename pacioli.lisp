@@ -621,13 +621,6 @@
                                          5))
               (scroll-extent window x y)))))))
 
-(add-keystroke-to-command-table 'pacioli-reconcile :next
-      :function (lambda (gesture num)
-                  (declare (ignore gesture num))
-                  (go-next-entry)
-                  nil)
-      :documentation "Go to the next entry")
-
 (defun go-prev-entry ()
   (let ((entries (entries-for-reconcile (reconcile-account *application-frame*)))
         (window (find-pane-named *application-frame* 'secondary)))
@@ -650,7 +643,21 @@
               (scroll-extent window 0 cy)
               (scroll-extent window x y)))))))
 
-(add-keystroke-to-command-table 'pacioli-reconcile :prev
+(define-gesture-name pacioli-reconcile-next-entry :keyboard :down)
+(define-gesture-name pacioli-reconcile-next-entry :keyboard (#\n :meta) :unique nil)
+(define-gesture-name pacioli-reconcile-prev-entry :keyboard :up)
+(define-gesture-name pacioli-reconcile-prev-entry :keyboard (#\p :meta) :unique nil)
+(define-gesture-name pacioli-reconcile-toogle-entry :keyboard (#\Return :meta))
+(define-gesture-name pacioli-reconcile-toogle-entry :keyboard :right :unique nil)
+
+(add-keystroke-to-command-table 'pacioli-reconcile 'pacioli-reconcile-next-entry
+      :function (lambda (gesture num)
+                  (declare (ignore gesture num))
+                  (go-next-entry)
+                  nil)
+      :documentation "Go to the next entry")
+
+(add-keystroke-to-command-table 'pacioli-reconcile 'pacioli-reconcile-prev-entry
       :function (lambda (gesture num)
                   (declare (ignore gesture num))
                   (go-prev-entry)
@@ -668,9 +675,7 @@
       (redisplay-frame-pane *application-frame* window)
       (scroll-extent window x y))))
 
-(define-gesture-name :kbd-select :keyboard (#\Return :meta) :unique t)
-
-(add-keystroke-to-command-table 'pacioli-reconcile :kbd-select
+(add-keystroke-to-command-table 'pacioli-reconcile 'pacioli-reconcile-toogle-entry
       :function (lambda (gesture num)
                   (declare (ignore gesture num))
                   (toggle-current-entry-reconcilied)
