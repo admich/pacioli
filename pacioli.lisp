@@ -758,3 +758,18 @@
               (formatting-cell ()
                 (write-string " Difference: ")
                 (present (- target (value (convert-amount (balance account :reconciled t)))) 'value)))))))))
+
+
+;;;; search
+(define-pacioli-command (com-search-regexp-in-name :name t :menu nil)
+    ((string 'string))
+  (push (make-instance 'pacioli-frame-virtual-account
+                 :frame *application-frame*
+                 :name (format nil "Search ~s" string)
+                 :fn-transaction-p (lambda (transaction)
+                                     (let ((s (ppcre:create-scanner
+                                               string
+                                               :case-insensitive-mode t)))
+                                       (ppcre:scan s (name transaction))))
+                 :fn-amount-for-account #'total-amount)
+        (virtual-accounts *application-frame*)))
