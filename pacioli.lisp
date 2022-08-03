@@ -163,7 +163,7 @@
       (clim-sys:make-process (lambda () (run-frame-top-level (make-application-frame 'pacioli :restore-history-p restore-history))) :name "pacioli")
       (run-frame-top-level (make-application-frame 'pacioli))))
 
-(defmethod acl:display-pane-with-view (frame pane view)
+(defmethod acl:display-pane-with-view ((frame pacioli) pane (view textual-view))
   (format pane "Pacioli"))
 
 (defmethod acl:display-pane-with-view ((frame pacioli) pane (view view-account))
@@ -700,7 +700,7 @@
     (redisplay-frame-pane *application-frame* window)
     (scroll-extent window x y)))
 
-(defmethod acl:display-pane-with-view (frame pane (view reconcile-view))
+(defmethod acl:display-pane-with-view ((frame pacioli) pane (view reconcile-view))
   (let ((*standard-output* pane)
         (account (reconcile-account frame)))
     (labels ((present-entry (entry)
