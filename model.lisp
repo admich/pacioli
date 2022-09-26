@@ -112,6 +112,9 @@
   (print-unreadable-object (object stream :type t :identity t)
     (format stream "(~a)" (name object))))
 
+(defun new-account (name parent)
+  (push (make-instance 'account :name name :parent parent) (children parent)))
+
 (defclass journal (account)
   ((%transactions :initarg :transactions :accessor transactions :initform '())))
 

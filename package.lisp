@@ -54,7 +54,8 @@
    #:make-broken-transactions-vaccount
    #:transaction-broken-p
    #:total-amount
-   #:virtual-account)
+   #:virtual-account
+   #:new-account)
   (:local-nicknames (#:a #:alexandria)
                     (#:lt #:local-time)
                     (#:clb #:clobber)))
@@ -64,5 +65,8 @@
   (:export
    #:pacioli)
   (:nicknames #:clim-ledger)
-  (:local-nicknames (#:a #:alexandria) (#:lt #:local-time) (#:acl #:adm-clim-lib)))
+  (:local-nicknames (#:a #:alexandria)
+                    (#:lt #:local-time)
+                    (#:acl #:adm-clim-lib)
+                    (#:pm #:pacioli-model)))
 
