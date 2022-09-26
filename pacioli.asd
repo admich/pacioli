@@ -5,7 +5,7 @@
   :author "Andrea De Michele (admich)"
   :license "BSD 2-Clause"
   :version "0.0.1"
-  :depends-on (#:mcclim #:cl-ledger #:local-time  #:scigraph-evo/contrib #:adm-clim-lib #:mcclim-completion-patch)
+  :depends-on (#:mcclim #:cl-ledger #:local-time  #:scigraph-evo/contrib #:adm-clim-lib #:mcclim-completion-patch :clobber)
   :serial t
   :components ((:file "patch")
                (:file "package")

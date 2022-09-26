@@ -55,7 +55,9 @@
    #:transaction-broken-p
    #:total-amount
    #:virtual-account)
-  (:local-nicknames (#:a #:alexandria) (#:lt #:local-time)))
+  (:local-nicknames (#:a #:alexandria)
+                    (#:lt #:local-time)
+                    (#:clb #:clobber)))
 
 (defpackage #:pacioli
   (:use #:clim-lisp #:clim #:pacioli-model)
