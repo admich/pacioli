@@ -374,8 +374,8 @@
          (transaction (make-instance 'transaction :date date :name name))
          (entry1 (make-instance 'entry :account account1 :amount amount1))
          (entry2 (make-instance 'entry :account account2 :amount amount2)))
-    (register-entries* transaction entry1 entry2)
-    (register-transaction (current-journal *application-frame*) transaction)
+    (pm:execute 'pm:register-entries* transaction entry1 entry2)
+    (pm:execute 'pm:register-transaction (current-journal *application-frame*) transaction)
     (set-main-view
      (make-instance 'edit-transaction-view :transaction transaction))))
 
@@ -391,26 +391,25 @@
                                                                        (* value (if (> (value (amount entry)) 0) 1 -1))
                                                                        (value (amount entry)))
                                                             :commodity (commodity (amount entry))))))
-        (register-entries* transaction cloned-entry)))
-    (register-transaction (current-journal *application-frame*) transaction)
+        (pm:execute 'pm:register-entries* transaction cloned-entry)))
+    (pm:execute 'pm:register-transaction (current-journal *application-frame*) transaction)
     (set-main-view
           (make-instance 'edit-transaction-view :transaction transaction))))
 
 (define-pacioli-command (com-delete-transaction :name t)
     ((transaction 'transaction :gesture :delete))
-  (delete-transaction transaction (current-journal *application-frame*)))
+  (pm:execute 'pm:delete-transaction transaction (current-journal *application-frame*)))
 
 (define-pacioli-command (com-delete-entry :name t)
     ((entry 'entry :gesture :delete))
-  (delete-entry entry))
+  (pm:execute 'pm:delete-entry entry))
 
 (define-pacioli-command (com-add-entry-to-transaction :name t)
     ((transaction 'transaction) (account 'account) (value 'value))
-  (register-entries*
-   transaction
-   (make-instance 'entry :account account
+  (let ((entry (make-instance 'entry :account account
                          :amount (make-instance 'single-commodity-amount
                                                 :value value :commodity *main-commodity*))))
+  (pm:execute 'pm:register-entries* transaction entry)))
 
 (defclass edit-transaction-view (textual-view)
   ((%transaction :initarg :transaction :reader view-transaction)))
@@ -435,9 +434,9 @@
                             :activate-callback
                             (lambda (gadget)
                               (declare (ignore gadget))
-                              (register-transaction
-                               (current-journal *application-frame*)
-                               transaction)
+                              (pm:execute 'pm:register-transaction
+                                          (current-journal *application-frame*)
+                                          transaction)
                               (execute-frame-command *application-frame*
                                                      '(com-refresh)))))))
     (fresh-line)
