@@ -182,9 +182,12 @@
   (push transaction (transactions journal))
   (setf (transactions journal) (sort (transactions journal) #'lt:timestamp> :key #'date)))
 
-(defmethod register-entries (transaction &rest entries)
+(defmethod register-entries (transaction entries)
   (mapc (lambda (x) (setf (transaction x) transaction)) entries)
   (setf (entries transaction) (append entries (entries transaction))))
+
+(defmethod register-entries* (transaction &rest entries)
+  (register-entries transaction entries))
 
 (defmethod delete-transaction (transaction journal)
   (setf (transactions journal) (delete transaction (transactions journal))))

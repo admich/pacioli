@@ -45,6 +45,7 @@
    #:subaccounts
    #:delete-transaction
    #:register-entries
+   #:register-entries*
    #:delete-entry
    #:reconciled
    #:note

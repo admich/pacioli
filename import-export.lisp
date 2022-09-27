@@ -44,7 +44,7 @@
                                         :date date :name description
                                         :note note
                                         :tags tags)))
-      (apply #'register-entries transaction
+      (register-entries transaction
                        (map 'list (lambda (x) (import-entry x journal date reconciled)) entries))
       (register-transaction journal transaction)
       (check-for-price transaction)

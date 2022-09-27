@@ -365,7 +365,7 @@
          (transaction (make-instance 'transaction :date date :name name))
          (entry1 (make-instance 'entry :account account1 :amount amount1))
          (entry2 (make-instance 'entry :account account2 :amount amount2)))
-    (register-entries transaction entry1 entry2)
+    (register-entries* transaction entry1 entry2)
     (register-transaction (current-journal *application-frame*) transaction)
     (set-main-view
      (make-instance 'edit-transaction-view :transaction transaction))))
@@ -382,7 +382,7 @@
                                                                        (* value (if (> (value (amount entry)) 0) 1 -1))
                                                                        (value (amount entry)))
                                                             :commodity (commodity (amount entry))))))
-        (register-entries transaction cloned-entry)))
+        (register-entries* transaction cloned-entry)))
     (register-transaction (current-journal *application-frame*) transaction)
     (set-main-view
           (make-instance 'edit-transaction-view :transaction transaction))))
@@ -397,7 +397,7 @@
 
 (define-pacioli-command (com-add-entry-to-transaction :name t)
     ((transaction 'transaction) (account 'account) (value 'value))
-  (register-entries
+  (register-entries*
    transaction
    (make-instance 'entry :account account
                          :amount (make-instance 'single-commodity-amount
