@@ -56,7 +56,9 @@
    #:transaction-broken-p
    #:total-amount
    #:virtual-account
-   #:new-account)
+   #:rename-account
+   #:register-account
+   #:execute)
   (:local-nicknames (#:a #:alexandria)
                     (#:lt #:local-time)
                     (#:clb #:clobber)))

@@ -336,10 +336,11 @@
 ;;;; Edit command
 (define-pacioli-command (com-new-account :name t)
     ((name 'string) (parent 'account :default (current-journal *application-frame*)))
-  (pm:new-account name parent))
+  (let ((account (make-instance 'account :name name :parent parent)))
+    (pm:execute 'pm:register-account account)))
 
 (define-pacioli-command (com-rename-account :name t) ((account 'account) (name 'string))
-  (setf (name account) name))
+  (pm:execute 'pm:rename-account account name))
 
 (define-pacioli-command (com-edit-transaction :name t)
     ((transaction 'transaction

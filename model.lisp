@@ -112,8 +112,11 @@
   (print-unreadable-object (object stream :type t :identity t)
     (format stream "(~a)" (name object))))
 
-(defun new-account (name parent)
-  (push (make-instance 'account :name name :parent parent) (children parent)))
+(defun register-account (account)
+  (push account (children (parent account))))
+
+(defun rename-account (account name)
+  (setf (name account) name))
 
 (defclass journal (account)
   ((%transactions :initarg :transactions :accessor transactions :initform '())))
@@ -154,7 +157,7 @@
 (defclass entry (tags-mixin note-mixin)
   ((%account :initarg :account :accessor account :type account)
    (%amount :initarg :amount :accessor amount :type amount)
-   (%transaction :initarg :transaction :accessor transaction :type transaction)
+   (%transaction :accessor transaction :type transaction)
    (%reconciled :initarg :reconciled
                 :accessor reconciled
                 :initform nil

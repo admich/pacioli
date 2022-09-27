@@ -10,9 +10,11 @@
   :components ((:file "patch")
                (:file "package")
 	           (:file "model")
+               (:file "model-clobber")
 	           (:file "import-export")
                (:file "config")
                (:file "scigraph-ledger")
                (:file "presentations")
-               (:file "pacioli")))
+               (:file "pacioli")
+               (:file "pacioli-clobber")))
 
