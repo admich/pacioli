@@ -36,8 +36,9 @@
 
 (defun execute (transaction-function &rest arguments)
   (let ((ret (apply transaction-function arguments)))
-    (clobber:log-transaction (cons transaction-function arguments)
-			               *transaction-log*)
+    (when *transaction-log*
+      (clobber:log-transaction (cons transaction-function arguments)
+			               *transaction-log*))
     ret))
 
 (defun init-clobber-journal (journal)
@@ -55,5 +56,8 @@
         (execute 'init-clobber-journal journal))))
 
 (defun stop-clobber ()
-  (clobber:close-transaction-log *transaction-log*))
+  (when *transaction-log*
+    (clobber:close-transaction-log *transaction-log*))
+  (setf *transaction-log* nil
+        *journal* nil))
 

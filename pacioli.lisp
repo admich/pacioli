@@ -34,9 +34,12 @@
   (import-ledger-prices file))
 
 (define-command (com-demo :name t :command-table cmd-file) ()
-  (setf (current-journal *application-frame*)
-        (import-ledger
-         (merge-pathnames "data/demo.ledger" (asdf:system-source-directory :pacioli)))))
+  (pm::stop-clobber)
+  (let ((journal (make-instance 'journal :name "Demo")))
+    (pm:execute 'pm::init-clobber-journal journal))
+  (pm:import-ledger
+         (merge-pathnames "data/demo.ledger" (asdf:system-source-directory :pacioli)))
+  (setf (current-journal *application-frame*) pm::*journal*))
 
 (define-command (com-quit :name t :keystroke (#\q :control) :command-table cmd-file) ()
   (frame-exit *application-frame*))
