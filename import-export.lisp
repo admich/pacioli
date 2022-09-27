@@ -4,10 +4,10 @@
    "Import a ledger prices file"
   (ledger:read-journal path))
 
-(defun import-ledger (path &key (name "journal"))
-  "Import a ledger file"
-  (let* ((journal (ledger:read-journal path))
-         (ret (make-instance 'journal :name name)))
+(defun import-ledger (file &key (name "journal"))
+  (let* ((journal (ledger:read-journal file))
+         (ret (make-instance 'journal :name "journal")))
+    (execute 'init-clobber-journal ret)
     (loop for x in (ledger:journal-contents journal) do
       (import-transaction x ret))
     ret))
@@ -43,12 +43,60 @@
       (let ((transaction (make-instance 'transaction
                                         :date date :name description
                                         :note note
-                                        :tags tags)))
-      (register-entries transaction
-                       (map 'list (lambda (x) (import-entry x journal date reconciled)) entries))
-      (register-transaction journal transaction)
-      (check-for-price transaction)
-      transaction))))
+                                        :tags tags))
+            (pacioli-entries (map 'list (lambda (x) (import-entry x journal date reconciled)) entries)))
+        (execute 'register-entries transaction pacioli-entries)
+        (execute 'register-transaction journal transaction)
+        (check-for-price transaction)
+        transaction))))
+
+(defun import-entry (ledger-transaction journal date reconciled)
+  (with-accessors ((account ledger:xact-account)
+                   (amount ledger:xact-amount)
+                   (status ledger:xact-status)
+                   (note ledger:xact-note)) ledger-transaction
+    (make-instance 'entry
+                   :account (find-or-create-account journal (ledger:account-fullname account))
+                   :amount (import-amount amount date)
+                   :note note
+                   :reconciled (or (import-reconciled status) reconciled))))
+
+(defun find-or-create-account (journal fullname)
+  (loop
+     with names = (ppcre:split ":" fullname)
+     with account = journal
+     with name
+     with accounts = (children journal)
+     while names do
+       (setf name (pop names))
+       (setf account (or (find name accounts :test #'string= :key #'name)
+                         (let ((new-account (make-instance 'account :name name :parent account)))
+                           (execute 'register-account new-account)
+                          new-account)))
+       (setf accounts (children account))
+     finally (return account)))
+
+(defmethod import-amount ((amount cambl:amount) date)
+  (let ((value (cambl:amount-quantity amount))
+        (commodity (a:make-keyword (cambl::commodity-symbol-name
+                                    (cambl::commodity-symbol
+                                     (cambl:amount-commodity amount))))))
+    (execute 'add-commodity commodity)
+    (a:when-let (price (import-price (cambl:amount-commodity amount) date))
+      (execute 'new-price commodity price))
+    (make-instance 'single-commodity-amount :value value
+                                            :commodity commodity)))
+
+(defmethod import-amount ((amount number) date)
+  (make-instance 'single-commodity-amount :value amount
+                                          :commodity nil))
+
+(defun import-price (comm date)
+  (when (cambl:annotated-commodity-p comm)
+    (let* ((annotation (cambl:commodity-annotation comm))
+           (amount (import-amount (cambl:annotation-price annotation) date))
+           (date (or (cambl:annotation-date annotation) date)))
+      (make-instance 'price :value amount :date date))))
 
 (defun check-for-price (transaction)
   (when (loop for entry in (entries transaction)
@@ -64,6 +112,7 @@
           for other = (first (remove main amounts))
           when (and main other (= (length amounts) 2))
             do
+               ;; salvare new-price with execute
                (new-price (commodity other)
                           (make-instance 'price
                                                 :value (make-instance 'single-commodity-amount
@@ -71,51 +120,6 @@
                                                                       :value (abs (/ (value main) (value other))))
                                                   :date (date transaction)))))))
 
-(defun import-entry (ledger-transaction journal date reconciled)
-  (with-accessors ((account ledger:xact-account)
-                   (amount ledger:xact-amount)
-                   (status ledger:xact-status)
-                   (note ledger:xact-note)) ledger-transaction
-    (make-instance 'entry
-                   :account (find-or-create-account journal (ledger:account-fullname account))
-                   :amount (import-amount amount date)
-                   :note note
-                   :reconciled (or (import-reconciled status) reconciled))))
-
-(defun import-price (comm date)
-  (when (cambl:annotated-commodity-p comm)
-    (let* ((annotation (cambl:commodity-annotation comm))
-           (amount (import-amount (cambl:annotation-price annotation) date))
-           (date (or (cambl:annotation-date annotation) date)))
-      (make-instance 'price :value amount :date date))))
-
-(defmethod import-amount ((amount cambl:amount) date)
-  (let ((value (cambl:amount-quantity amount))
-        (commodity (a:make-keyword (cambl::commodity-symbol-name
-                                    (cambl::commodity-symbol
-                                     (cambl:amount-commodity amount))))))
-    (add-commodity commodity)
-    (a:when-let (price (import-price (cambl:amount-commodity amount) date))
-      (new-price commodity price))
-    (make-instance 'single-commodity-amount :value value
-                                            :commodity commodity)))
-
-(defmethod import-amount ((amount number) date)
-  (make-instance 'single-commodity-amount :value amount
-                                          :commodity nil))
-
-(defun find-or-create-account (journal fullname)
-  (loop
-     with names = (ppcre:split ":" fullname)
-     with account = journal
-     with name
-     with accounts = (children journal)
-     while names do
-       (setf name (pop names))
-       (setf account (or (find name accounts :test #'string= :key #'name)
-                         (car (push (make-instance 'account :name name :parent account) (children (or account journal))))))
-       (setf accounts (children account))
-     finally (return account)))
 
 ;;;; export ledger
 (defparameter *export-indent* "    ")

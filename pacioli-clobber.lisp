@@ -11,5 +11,4 @@
 (define-command (com-import-ledger :name t :keystroke (#\O :control) :command-table cmd-file)
     ((file 'pathname))
   (pm:import-ledger file)
-  ;; rivedere se non fare altrimenti (non settando il *journal* nell'import)
   (setf (current-journal *application-frame*) pm::*journal*))
