@@ -43,7 +43,7 @@
 (defun init-clobber-journal (journal)
   (setf *journal* journal))
 
-(defun start-clobber (filename)
+(defun start-clobber (filename name)
   (setf *journal* nil)
   (setf *transaction-log*
 	(clobber:open-transaction-log
@@ -51,7 +51,7 @@
 	 (lambda (transaction)
 	   (apply (car transaction) (cdr transaction)))))
     (unless *journal*
-      (let ((journal (make-instance 'journal :name "PIPPO")))
+      (let ((journal (make-instance 'journal :name name)))
         (execute 'init-clobber-journal journal))))
 
 (defun stop-clobber ()

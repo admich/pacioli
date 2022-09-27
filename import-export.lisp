@@ -4,13 +4,11 @@
    "Import a ledger prices file"
   (ledger:read-journal path))
 
-(defun import-ledger (file &key (name "journal"))
-  (let* ((journal (ledger:read-journal file))
-         (ret (make-instance 'journal :name "journal")))
-    (execute 'init-clobber-journal ret)
+(defun import-ledger (file)
+  (let* ((journal (ledger:read-journal file)))
     (loop for x in (ledger:journal-contents journal) do
-      (import-transaction x ret))
-    ret))
+      (import-transaction x *journal*))
+    *journal*))
 
 (defun import-reconciled (ledger-status)
   (ecase ledger-status

@@ -300,10 +300,3 @@ of the account ACCOUNT"
                  (amount x)))
         :finally (return total)))
 
-
-(defun save-journal (journal file)
-  (cl-store:store journal file))
-
-(defun load-journal (file)
-  (cl-store:restore file))
-

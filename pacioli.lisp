@@ -13,14 +13,19 @@
          (nil :divider nil)
          ("Quit" :command com-quit)))
 
-(define-command (com-save :name t :keystroke (#\s :control) :command-table cmd-file) ((file 'pathname))
-  (save-journal (current-journal *application-frame*) file))
+(define-command (com-open :name t :keystroke (#\o :control) :command-table cmd-file)
+    ((file 'pathname)
+     &key
+     (name 'string :default "ledger"))
+  (pm::start-clobber file name)
+  (setf (current-journal *application-frame*) pm::*journal*))
 
-(define-command (com-load :name t :keystroke (#\o :control) :command-table cmd-file) ((file 'pathname))
-  (setf (current-journal *application-frame*) (load-journal file)))
+(define-command (com-close :name t :command-table cmd-file) ()
+  (pm::stop-clobber)
+  (setf (current-journal *application-frame*) (make-instance 'journal :name "None")))
 
-(define-command (com-import-ledger :name t :keystroke (#\O :control) :command-table cmd-file) ((file 'pathname))
-  (setf (current-journal *application-frame*) (import-ledger file)))
+(define-command (com-import-ledger :name t  :command-table cmd-file) ((file 'pathname))
+  (pm:import-ledger file))
 
 (define-command (com-export-as-ledger :name t :keystroke (#\E :control) :command-table cmd-file) ((file 'pathname))
   (export-ledger (current-journal *application-frame*) file))

@@ -15,6 +15,5 @@
                (:file "config")
                (:file "scigraph-ledger")
                (:file "presentations")
-               (:file "pacioli")
-               (:file "pacioli-clobber")))
+               (:file "pacioli")))
 
