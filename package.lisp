@@ -58,7 +58,8 @@
    #:virtual-account
    #:rename-account
    #:register-account
-   #:execute)
+   #:execute
+   #:modify-object)
   (:local-nicknames (#:a #:alexandria)
                     (#:lt #:local-time)
                     (#:clb #:clobber)))

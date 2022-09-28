@@ -5,6 +5,10 @@
 (defparameter *prices* '())
 (defparameter *possible-tags* '())
 
+(defun modify-object (obj accessor new-value)
+  (funcall (fdefinition (list 'setf accessor))
+                     new-value obj))
+
 (defclass price ()
   ((%date :initarg :date :accessor date :initform (lt:today))
    (%amount :initarg :value :accessor amount)))

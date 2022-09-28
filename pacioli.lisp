@@ -493,7 +493,8 @@
            (present (,slot-accessor object) ',slot-ptype :stream stream :sensitive nil))
          (define-pacioli-command (,command-name :name t)
              ((object ,presentation-name :gesture :edit))
-           (setf (,slot-accessor object) (accept ',slot-ptype :default (,slot-accessor object) :insert-default t))))))
+           (let ((new-value (accept ',slot-ptype :default (,slot-accessor object) :insert-default t)))
+             (pm:execute 'pm:modify-object object ',slot-accessor new-value))))))
 
 (define-presentation-editor transaction (date timestamp))
 (define-presentation-editor transaction  (name string))
