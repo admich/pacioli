@@ -599,7 +599,7 @@
   (let ((account (reconcile-account *application-frame*)))
     (loop :for entry :in (entries-for-reconcile account)
           :when (eql (reconciled entry) :pending) :do
-            (setf (reconciled entry) t)))
+            (pm:execute 'modify-object entry 'reconciled t)))
   (set-secondary-view +textual-view+)
   (setf (frame-command-table *application-frame*) (find-command-table 'pacioli))
   (setf (frame-current-layout *application-frame*) 'default))
@@ -674,21 +674,20 @@
                   nil)
       :documentation "Go to the prev entry")
 
-(defun toggle-current-entry-reconcilied ()
-  (let ((entry (reconcile-current-entry *application-frame*))
-        (window (find-pane-named *application-frame* 'secondary)))
+(defun toggle-entry-reconciled (entry window)
     (case (reconciled entry)
-      (:pending (setf (reconciled entry) nil))
-      ((nil) (setf (reconciled entry) :pending)))
+      (:pending (pm:execute 'pm:modify-object entry 'pm:reconciled nil))
+      ((nil) (pm:execute 'pm:modify-object entry 'pm:reconciled :pending)))
     (redisplay-frame-pane *application-frame* (find-pane-named *application-frame* 'reconcile-status))
     (multiple-value-bind (x y) (window-viewport-position window)
       (redisplay-frame-pane *application-frame* window)
-      (scroll-extent window x y))))
+      (scroll-extent window x y)))
 
 (add-keystroke-to-command-table 'pacioli-reconcile 'pacioli-reconcile-toogle-entry
       :function (lambda (gesture num)
                   (declare (ignore gesture num))
-                  (toggle-current-entry-reconcilied)
+                  (toggle-entry-reconciled (reconcile-current-entry *application-frame*)
+                                        (find-pane-named *application-frame* 'secondary))
                   nil)
       :documentation "Toggle reconciled status of the current entry")
 
@@ -701,14 +700,8 @@
            :documentation "Toggle reconcile status"
            :pointer-documentation "Toggle reconcile status")
     (entry window)
-  (case (reconciled entry)
-    (:pending (setf (reconciled entry) nil))
-    ((nil) (setf (reconciled entry) :pending)))
-  (setf (reconcile-current-entry *application-frame*) entry)
-  (redisplay-frame-pane *application-frame* (find-pane-named *application-frame* 'reconcile-status))
-  (multiple-value-bind (x y) (window-viewport-position window)
-    (redisplay-frame-pane *application-frame* window)
-    (scroll-extent window x y)))
+  (toggle-entry-reconciled entry window)
+  (setf (reconcile-current-entry *application-frame*) entry))
 
 (defmethod acl:display-pane-with-view ((frame pacioli) pane (view reconcile-view))
   (let ((*standard-output* pane)
