@@ -59,7 +59,9 @@
    #:rename-account
    #:register-account
    #:execute
-   #:modify-object)
+   #:modify-object
+   #:add-tags
+   #:delete-tag)
   (:local-nicknames (#:a #:alexandria)
                     (#:lt #:local-time)
                     (#:clb #:clobber)))

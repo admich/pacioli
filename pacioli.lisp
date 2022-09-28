@@ -542,25 +542,27 @@
 
 (define-pacioli-command  (com-set-tags :name t)
     ((object-with-tags 'pacioli-model::tags-mixin) (tags '(sequence tag)))
-  (setf (tags object-with-tags) tags))
+  (pm:execute 'pm:modify-object object-with-tags 'pm:tags tags))
 
 (define-pacioli-command  (com-delete-tag)
     ((tag 'tag-of-object :gesture :delete))
   (let ((object-with-tag (first tag))
         (tag (second tag)))
-    (setf (tags object-with-tag) (remove tag (tags object-with-tag)))))
+    (pm:execute 'pm:delete-tag object-with-tag tag)))
 
 (define-pacioli-command  (com-edit-tag)
-    ((tag 'tag-of-object :gesture :edit) (new-tag 'tag))
+    ((tag 'tag-of-object :gesture :edit)
+     (new-tag 'tag))
   (let ((object-with-tag (first tag))
         (tag (second tag)))
-    (setf (tags object-with-tag) (remove tag (tags object-with-tag)))
-    (pushnew new-tag (tags object-with-tag))))
+    (pm:execute 'pm:delete-tag object-with-tag tag)
+    (pm:execute 'pm:add-tags object-with-tag (list new-tag))))
 
 (define-pacioli-command  (com-add-tags)
-    ((tag 'tag-of-object :gesture :select) (new-tags '(sequence tag)))
+    ((tag 'tag-of-object :gesture :select)
+     (new-tags '(sequence tag)))
   (let ((object-with-tag (first tag)))
-    (setf (tags object-with-tag) (union new-tags (tags object-with-tag)))))
+    (pm:execute 'pm:add-tags object-with-tag new-tags)))
 
 
 ;;;; Reconcile

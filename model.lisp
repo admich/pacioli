@@ -155,6 +155,14 @@
 (defclass tags-mixin ()
   ((%tags :initarg :tags :accessor tags :initform nil)))
 
+(defun delete-tag (obj tag)
+  (setf (tags obj)
+        (remove tag (tags obj))))
+
+(defun add-tags (obj tags)
+  (loop for x in tags do
+    (pushnew x (tags obj))))
+
 (defclass note-mixin ()
   ((%note :initarg :note :accessor note :initform nil :type (or null string))))
 
