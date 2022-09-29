@@ -34,23 +34,51 @@
   (:date date)
   (:value amount))
 
+(defparameter *log-comment* "")
+(defmacro with-log-comment (comment &body body)
+  `(let ((*log-comment* ,comment))
+     ,@body))
+
+(defclass log-transaction ()
+  ((%function-name :initarg :function-name :reader function-name)
+   (%arguments :initarg :arguments :reader arguments)
+   (%creation-date :initform (lt:now)
+		   :initarg :creation-date
+		   :reader creation-date)
+   (%comment :initform *log-comment* :initarg :comment :reader comment)))
+
+(clobber:define-save-info log-transaction
+  (:function-name function-name)
+  (:arguments arguments)
+  (:creation-date creation-date)
+  (:comment comment))
+
+(defparameter *log-transactions* '())
+
 (defun execute (transaction-function &rest arguments)
   (let ((ret (apply transaction-function arguments)))
     (when *transaction-log*
-      (clobber:log-transaction (cons transaction-function arguments)
-			               *transaction-log*))
+      (let ((log-transaction (make-instance 'log-transaction
+		       :function-name transaction-function
+		       :arguments arguments)))
+        (push log-transaction *log-transactions*)
+        (clobber:log-transaction log-transaction
+			                     *transaction-log*)))
     ret))
 
 (defun init-clobber-journal (journal)
   (setf *journal* journal))
 
 (defun start-clobber (filename name)
-  (setf *journal* nil)
+  (setf *journal* '())
+  (setf *log-transactions* '())
   (setf *transaction-log*
 	(clobber:open-transaction-log
 	 filename
 	 (lambda (transaction)
-	   (apply (car transaction) (cdr transaction)))))
+       (push transaction *log-transactions*)
+	   (apply (function-name transaction)
+		  (arguments transaction)))))
     (unless *journal*
       (let ((journal (make-instance 'journal :name name)))
         (execute 'init-clobber-journal journal))))
