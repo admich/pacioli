@@ -79,7 +79,8 @@
         (commodity (a:make-keyword (cambl::commodity-symbol-name
                                     (cambl::commodity-symbol
                                      (cambl:amount-commodity amount))))))
-    (execute 'add-commodity commodity)
+    (unless (find commodity *commodities*)
+      (execute 'add-commodity commodity))
     (a:when-let (price (import-price (cambl:amount-commodity amount) date))
       (execute 'new-price commodity price))
     (make-instance 'single-commodity-amount :value value
@@ -111,12 +112,12 @@
           when (and main other (= (length amounts) 2))
             do
                ;; salvare new-price with execute
-               (new-price (commodity other)
-                          (make-instance 'price
-                                                :value (make-instance 'single-commodity-amount
-                                                                      :commodity (commodity main)
-                                                                      :value (abs (/ (value main) (value other))))
-                                                  :date (date transaction)))))))
+               (execute 'new-price (commodity other)
+                        (make-instance 'price
+                                       :value (make-instance 'single-commodity-amount
+                                                             :commodity (commodity main)
+                                                             :value (abs (/ (value main) (value other))))
+                                       :date (date transaction)))))))
 
 
 ;;;; export ledger
