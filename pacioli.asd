@@ -15,5 +15,8 @@
                (:file "config")
                (:file "scigraph-ledger")
                (:file "presentations")
-               (:file "pacioli")))
+               (:file "pacioli"))
+  :build-operation "program-op" ;; leave as is
+  :build-pathname "pacioli"
+  :entry-point "pacioli:pacioli")
 
