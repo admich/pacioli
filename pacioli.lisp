@@ -383,15 +383,7 @@
     ((date 'timestamp) (xact 'transaction) (value '(null-or-type value)))
   (let* ((transaction (make-instance 'transaction :date date :name (name xact) :tags (tags xact))))
     (dolist (entry (entries xact))
-      (let* ((cloned-entry
-               (make-instance 'entry :account (account entry)
-                                     :tags (copy-list (tags entry))
-                                     :amount (make-instance 'single-commodity-amount
-                                                            :value (if value
-                                                                       (* value (if (> (value (amount entry)) 0) 1 -1))
-                                                                       (value (amount entry)))
-                                                            :commodity (commodity (amount entry))))))
-        (pm:execute 'pm:register-entries* transaction cloned-entry)))
+      (pm:execute 'pm:register-entries* transaction (clone-entry entry value)))
     (pm:execute 'pm:register-transaction (current-journal *application-frame*) transaction)
     (set-main-view
           (make-instance 'edit-transaction-view :transaction transaction))))

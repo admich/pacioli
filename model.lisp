@@ -175,6 +175,16 @@
                 :initform nil
                 :type (member t nil :pending))))
 
+(defun clone-entry (entry &optional value)
+  (make-instance 'entry :account (account entry)
+                        :tags (copy-list (tags entry))
+                        :note (note entry)
+                        :amount (make-instance 'single-commodity-amount
+                                               :value (if value
+                                                          (* value (if (> (value (amount entry)) 0) 1 -1))
+                                                          (value (amount entry)))
+                                               :commodity (commodity (amount entry)))))
+
 (defmethod print-object ((object entry) stream)
   (print-unreadable-object (object stream :type t :identity t)
     (format stream "(~a ~a)"  (account object) (amount object))))

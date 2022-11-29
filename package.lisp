@@ -61,7 +61,8 @@
    #:execute
    #:modify-object
    #:add-tags
-   #:delete-tag)
+   #:delete-tag
+   #:clone-entry)
   (:local-nicknames (#:a #:alexandria)
                     (#:lt #:local-time)
                     (#:clb #:clobber)))
