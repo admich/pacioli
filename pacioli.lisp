@@ -374,19 +374,25 @@
                                  :value value :commodity *main-commodity*))
          (amount2 (make-instance 'single-commodity-amount
                                  :value (- value) :commodity *main-commodity*))
-         (transaction (make-instance 'transaction :date date :name name))
          (entry1 (make-instance 'entry :account account1 :amount amount1))
-         (entry2 (make-instance 'entry :account account2 :amount amount2)))
-    (pm:execute 'pm:register-entries* transaction entry1 entry2)
+         (entry2 (make-instance 'entry :account account2 :amount amount2))
+         (transaction (make-instance 'transaction
+                                     :date date
+                                     :name name
+                                     :entries (list entry1 entry2))))
     (pm:execute 'pm:register-transaction (current-journal *application-frame*) transaction)
     (set-main-view
      (make-instance 'edit-transaction-view :transaction transaction))))
 
 (define-pacioli-command (com-clone-transaction :name t :keystroke (#\A :meta))
     ((date 'timestamp) (xact 'transaction) (value '(null-or-type value)))
-  (let* ((transaction (make-instance 'transaction :date date :name (name xact) :tags (tags xact))))
-    (dolist (entry (entries xact))
-      (pm:execute 'pm:register-entries* transaction (clone-entry entry value)))
+  (let ((transaction
+          (make-instance 'transaction
+                         :date date
+                         :name (name xact)
+                         :tags (copy-list (tags xact))
+                         :note (note xact)
+                         :entries (map 'list #'clone-entry (entries xact)))))
     (pm:execute 'pm:register-transaction (current-journal *application-frame*) transaction)
     (set-main-view
           (make-instance 'edit-transaction-view :transaction transaction))))
