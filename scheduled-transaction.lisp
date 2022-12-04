@@ -1,15 +1,25 @@
 (in-package #:pacioli)
 
+(defun new-scheduled-transaction-id ()
+  (if *scheduled-transactions*
+      (+ 1 (reduce #'max *scheduled-transactions* :key #'id))
+      0))
+
 (defclass scheduled-transaction (transaction)
   ((%scheduling :initarg :scheduling :initform :monthly :accessor scheduling)
-   (%last-creation :initarg :last-creation :initform nil :accessor last-creation)))
+   (%last-creation :initarg :last-creation :initform nil :accessor last-creation)
+   (%id :initarg :id :initform (new-scheduled-transaction-id) :reader id)))
 
 (clobber:define-save-info scheduled-transaction
   (:scheduling scheduling)
-  (:last-creation last-creation))
+  (:last-creation last-creation)
+  (:id id))
 
 (defmethod update-last-creation (transaction date)
   (setf (last-creation transaction) date))
+
+(defmethod scheduled-transaction-tag (transaction)
+  (a:make-keyword (format nil "SCHED-~d" (id transactione))))
 
 
 ;;; presentations
@@ -70,7 +80,9 @@
                          :entries entries
                          :date date
                          :name (name transaction)
-                         :tags (cons :SCHEDULED (copy-list (tags transaction)))
+                         :tags (cons :SCHED
+                                     (cons (scheduled-transaction-tag transaction)
+                                           (copy-list (tags transaction))))
                          :note (note transaction)))))
                        
 (define-pacioli-command (com-create-scheduled-transactions :name t)
@@ -80,5 +92,6 @@
       (pm:execute 'pm:register-transaction
                   (current-journal *application-frame*)
                   sched-tr)
-          :finally (pm:execute 'update-last-creation tr (date sched-tr)))))
+          :finally (when sched-tr
+                     (pm:execute 'update-last-creation tr (date sched-tr))))))
        
