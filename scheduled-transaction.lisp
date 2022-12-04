@@ -16,7 +16,7 @@
   (:id id))
 
 (defmethod scheduled-transaction-tag (transaction)
-  (a:make-keyword (format nil "SCHED-~d" (id transactione))))
+  (a:make-keyword (format nil "SCHED-~d" (id transaction))))
 
 
 ;;; presentations
