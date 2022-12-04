@@ -15,9 +15,6 @@
   (:last-creation last-creation)
   (:id id))
 
-(defmethod update-last-creation (transaction date)
-  (setf (last-creation transaction) date))
-
 (defmethod scheduled-transaction-tag (transaction)
   (a:make-keyword (format nil "SCHED-~d" (id transactione))))
 
@@ -93,5 +90,5 @@
                   (current-journal *application-frame*)
                   sched-tr)
           :finally (when sched-tr
-                     (pm:execute 'update-last-creation tr (date sched-tr))))))
+                     (pm:execute 'pm:modify-object tr 'last-creation (date sched-tr))))))
        
