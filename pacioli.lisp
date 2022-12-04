@@ -392,7 +392,7 @@
                          :name (name xact)
                          :tags (copy-list (tags xact))
                          :note (note xact)
-                         :entries (map 'list #'clone-entry (entries xact)))))
+                         :entries (map 'list (lambda (x) (clone-entry x value)) (entries xact)))))
     (pm:execute 'pm:register-transaction (current-journal *application-frame*) transaction)
     (set-main-view
           (make-instance 'edit-transaction-view :transaction transaction))))
