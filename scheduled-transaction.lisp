@@ -1,7 +1,5 @@
 (in-package #:pacioli)
 
-(defparameter *scheduled-transactions* nil)
-
 (defclass scheduled-transaction (transaction)
   ((%scheduling :initarg :scheduling :initform :monthly :accessor scheduling)
    (%last-creation :initarg :last-creation :initform nil :accessor last-creation)))
@@ -84,4 +82,3 @@
                   sched-tr)
           :finally (pm:execute 'update-last-creation tr (date sched-tr)))))
        
-

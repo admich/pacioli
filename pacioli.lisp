@@ -2,6 +2,8 @@
 
 (in-package #:pacioli)
 
+(defparameter *scheduled-transactions* nil)
+
 ;;; cmd-file command table
 (define-command-table cmd-file
   :menu (("Load" :command com-load)
@@ -17,6 +19,7 @@
     ((file 'pathname)
      &key
      (name 'string :default "ledger"))
+  (setf *scheduled-transactions* nil)
   (pm::start-clobber file name)
   (setf (current-journal *application-frame*) pm::*journal*))
 
