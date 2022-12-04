@@ -199,6 +199,10 @@
   ((%date :initarg :date :initform (local-time:today) :accessor date)
    (%entries :initform '() :initarg :entries :accessor entries)))
 
+(defmethod initialize-instance :after ((object transaction) &key)
+  (dolist (entry (entries object))
+    (setf (transaction entry) object)))
+
 (defmethod print-object ((object transaction) stream)
   (print-unreadable-object (object stream :type t :identity t)
     (format stream "(~a ~a)" (date object) (name object))))

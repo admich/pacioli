@@ -17,7 +17,8 @@
   (:date date)
   (:name name)
   (:tags tags)
-  (:note note))
+  (:note note)
+  (:entries entries))
 
 (clobber:define-save-info entry
   (:account account)
