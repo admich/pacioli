@@ -34,7 +34,8 @@
   (let ((*standard-output* pane))
     (format t "Scheduled Transaction:~%")
     (dolist (x *scheduled-transactions*)
-      (present x 'scheduled-transaction))))
+      (present x 'scheduled-transaction)
+      (fresh-line))))
 
 (defun new-scheduled-transaction (transaction)
   (push transaction *scheduled-transactions*))
@@ -89,6 +90,18 @@
       (pm:execute 'pm:register-transaction
                   (current-journal *application-frame*)
                   sched-tr)
-          :finally (when sched-tr
-                     (pm:execute 'pm:modify-object tr 'last-creation (date sched-tr))))))
+          :collect sched-tr :into created-tr
+          :finally
+             (when created-tr
+               (pm:execute 'pm:modify-object tr 'last-creation (date sched-tr))
+               (let ((vaccount
+                       (make-instance 'pacioli-frame-virtual-account
+                                      :frame *application-frame*
+                                      :name (format nil "Scheduled Transaction Created ~a" (lt:now))
+                                      :fn-transaction-p (lambda (transaction)
+                                                          (find transaction created-tr))
+                                      :fn-amount-for-account #'total-amount)))
+                 (push vaccount
+                       (virtual-accounts *application-frame*))
+                 (set-main-view (make-instance 'view-account :account vaccount)))))))
        
